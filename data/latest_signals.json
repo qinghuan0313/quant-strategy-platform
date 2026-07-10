@@ -1,0 +1,135 @@
+[
+  {
+    "code": "601088",
+    "name": "中国神华",
+    "signal_A": 44.2,
+    "signal_B": 64.3,
+    "signal_C": 53.0
+  },
+  {
+    "code": "600900",
+    "name": "长江电力",
+    "signal_A": 58.7,
+    "signal_B": 81.5,
+    "signal_C": 44.5
+  },
+  {
+    "code": "002714",
+    "name": "牧原股份",
+    "signal_A": 50.5,
+    "signal_B": 69.0,
+    "signal_C": 39.5
+  },
+  {
+    "code": "601225",
+    "name": "陕西煤业",
+    "signal_A": 49.7,
+    "signal_B": 75.2,
+    "signal_C": 50.0
+  },
+  {
+    "code": "600188",
+    "name": "兖矿能源",
+    "signal_A": 42.5,
+    "signal_B": 41.4,
+    "signal_C": 50.9
+  },
+  {
+    "code": "600036",
+    "name": "招商银行",
+    "signal_A": 48.0,
+    "signal_B": 62.8,
+    "signal_C": 53.0
+  },
+  {
+    "code": "600309",
+    "name": "万华化学",
+    "signal_A": 46.9,
+    "signal_B": 43.0,
+    "signal_C": 43.8
+  },
+  {
+    "code": "601006",
+    "name": "大秦铁路",
+    "signal_A": 48.5,
+    "signal_B": 62.8,
+    "signal_C": 48.8
+  },
+  {
+    "code": "600011",
+    "name": "华能国际",
+    "signal_A": 40.7,
+    "signal_B": 39.5,
+    "signal_C": 55.6
+  },
+  {
+    "code": "600795",
+    "name": "国电电力",
+    "signal_A": 47.0,
+    "signal_B": 62.4,
+    "signal_C": 56.0
+  },
+  {
+    "code": "000876",
+    "name": "新希望",
+    "signal_A": 51.8,
+    "signal_B": 65.5,
+    "signal_C": 37.0
+  },
+  {
+    "code": "601872",
+    "name": "招商轮船",
+    "signal_A": 43.0,
+    "signal_B": 41.0,
+    "signal_C": 50.0
+  },
+  {
+    "code": "600426",
+    "name": "华鲁恒升",
+    "signal_A": 46.2,
+    "signal_B": 42.0,
+    "signal_C": 50.0
+  },
+  {
+    "code": "002064",
+    "name": "华峰化学",
+    "signal_A": 49.4,
+    "signal_B": 53.5,
+    "signal_C": 46.0
+  },
+  {
+    "code": "601898",
+    "name": "中煤能源",
+    "signal_A": 43.2,
+    "signal_B": 49.0,
+    "signal_C": 50.1
+  },
+  {
+    "code": "601985",
+    "name": "中国核电",
+    "signal_A": 47.4,
+    "signal_B": 56.5,
+    "signal_C": 56.3
+  },
+  {
+    "code": "300498",
+    "name": "温氏股份",
+    "signal_A": 50.9,
+    "signal_B": 62.3,
+    "signal_C": 39.5
+  },
+  {
+    "code": "002311",
+    "name": "海大集团",
+    "signal_A": 54.1,
+    "signal_B": 72.0,
+    "signal_C": 36.5
+  },
+  {
+    "code": "001965",
+    "name": "招商公路",
+    "signal_A": 48.2,
+    "signal_B": 55.2,
+    "signal_C": 55.5
+  }
+]

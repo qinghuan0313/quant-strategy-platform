@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType File -Path \"$env:USERPROFILE\\\\Desktop\\\\quant_learn\\\\step1_pull_data.py\" -Force)",
+      "PowerShell(code \"$env:USERPROFILE\\\\Desktop\\\\quant_learn\\\\step1_pull_data.py\")",
+      "PowerShell(python -c \"import yfinance as yf; data = yf.download\\('510300.SS', start='2020-01-01', end='2025-12-31'\\); print\\(f'����: {len\\(data\\)}'\\); print\\(data.head\\(3\\)\\)\")",
+      "PowerShell(pip install akshare)",
+      "PowerShell(New-Item -ItemType File -Path \"$env:USERPROFILE\\\\Desktop\\\\quant_learn\\\\step2_ma_strategy.py\" -Force; code \"$env:USERPROFILE\\\\Desktop\\\\quant_learn\\\\step2_ma_strategy.py\")",
+      "PowerShell(New-Item -ItemType File -Path \"$env:USERPROFILE\\\\Desktop\\\\quant_learn\\\\learn_python.py\" -Force; code \"$env:USERPROFILE\\\\Desktop\\\\quant_learn\\\\learn_python.py\")",
+      "WebFetch(domain:mp.weixin.qq.com)",
+      "WebFetch(domain:item.winxuan.com)",
+      "WebFetch(domain:aus.zxhsd.com)",
+      "WebFetch(domain:www.7cxk.com)",
+      "Read(//c/Users/szh/**)",
+      "PowerShell(pip install python-docx -q 2>$null)",
+      "PowerShell(cd \"C:\\\\Users\\\\szh\\\\Desktop\"; $original = \"《习近平经济思想概论》复习纲要2026B.docx\"; $modified = \"《习近平经济思想概论》复习纲要2026B_修改.docx\"; if \\(Test-Path $modified\\) { try { Remove-Item $original -Force -ErrorAction Stop; Rename-Item $modified $original; Write-Host \"Replaced original file successfully\" } catch { Write-Host \"Cannot replace original - it may be open in Word. Modified file is at: $modified\"; Write-Host \"Please close the original file and manually rename.\" } } else { Write-Host \"Modified file not found\" })",
+      "WebFetch(domain:finance.eastmoney.com)",
+      "WebFetch(domain:stock.stockstar.com)",
+      "WebFetch(domain:quote.eastmoney.com)",
+      "WebFetch(domain:q.stock.sohu.com)",
+      "PowerShell(pip install python-docx)",
+      "PowerShell(python c:\\\\Users\\\\szh\\\\Desktop\\\\quant_learn\\\\generate_docx.py)",
+      "PowerShell(python c:\\\\Users\\\\szh\\\\Desktop\\\\quant_learn\\\\build_doc.py)",
+      "PowerShell([System.Reflection.Assembly]::LoadWithPartialName\\('System.Drawing'\\); \\(New-Object System.Drawing.Text.InstalledFontCollection\\).Families | Where-Object { $_.Name -match '黑|宋|明|Hei|Sun|Min|Song|Ming|YaHei|Kai' } | ForEach-Object { $_.Name })"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\szh\\Desktop",
+      "C:\\Users\\szh\\.claude\\memory",
+      "C:\\Users\\szh\\.claude",
+      "C:\\Users\\szh\\.claude\\projects\\c--Users-szh-Desktop-quant-learn"
+    ]
+  }
+}

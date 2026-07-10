@@ -1,0 +1,5 @@
+apikey.txt
+__pycache__/
+*.pyc
+.DS_Store
+sentiment_cache.csv

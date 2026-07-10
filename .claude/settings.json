@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d//**)",
+      "PowerShell($env:PYTHONIOENCODING = 'utf-8'; cd c:\\\\Users\\\\szh\\\\Desktop\\\\quant_learn; python gen_docx.py 2>&1)",
+      "PowerShell($env:PYTHONIOENCODING = 'utf-8'; cd c:\\\\Users\\\\szh\\\\Desktop\\\\quant_learn; python build_docx.py 2>&1)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Edit(~/.claude/skills/tdd/**)",
+      "Edit(~/.claude/skills/diagnosing-bugs/**)",
+      "Edit(~/.claude/skills/grill-me/**)",
+      "PowerShell(Get-CimInstance Win32_ComputerSystem | Select-Object @{N='总内存\\(GB\\)';E={[math]::Round\\($_.TotalPhysicalMemory/1GB, 1\\)}}, @{N='可用内存\\(GB\\)';E={[math]::Round\\(\\(Get-CimInstance Win32_OperatingSystem\\).FreePhysicalMemory/1MB, 1\\)}})"
+    ]
+  }
+}

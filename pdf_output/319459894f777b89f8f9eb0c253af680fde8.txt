@@ -1,0 +1,1515 @@
+File: 319459894f777b89f8f9eb0c253af680fde8.pdf
+Pages: 17
+============================================================
+
+--- Page 1 ---
+
+
+www.e-neurospine.org   159
+Review Article
+Corresponding Author
+Javad Tavakoli
+ https://orcid.org/0000-0002-0696-6530
+Department of Biomedical Engineering, 
+School of Engineering, RMIT University, 
+124 La Trobe St, Melbourne, VIC 3000, 
+Australia
+Email: javad.tavakoli@rmit.edu.au
+Received: November 17, 2025 
+Revised: January 9, 2026 
+Accepted: January 13, 2026
+The Biomechanical Landscape of 
+Lumbar Disc Herniation: 
+Mechanobiological Insights Into 
+Injury and Regeneration
+Gianluca Vadala1, Fabrizio Russo2, In-Ho Han3, Amit Jain4, Javad Tavakoli5; 
+AO Spine Knowledge Forum Degenerative
+1Laboratory of Regenerative Orthopaedics, Operative Research Unit of Orthopaedic and Trauma Surgery, 
+Fondazione Policlinico Universitario Campus Bio-Medico, Rome, Italy
+2Research Unit of Orthopaedic and Trauma Surgery, Department of Medicine and Surgery, Università Campus 
+Bio-Medico di Roma, Rome, Italy
+3Department of Neurosurgery, Bundang CHA Medical Center, CHA University School of Medicine, Seongnam, 
+Korea
+4Department of Orthopaedic Surgery, Johns Hopkins University, Baltimore, MD, USA
+5Department of Biomedical Engineering, School of Engineering, RMIT University, Melbourne, Australia
+Objective: Lumbar disc herniation is among the most common and disabling spinal disor­
+ders, driven by the interplay of mechanical overload, structural failure, and cellular dys­
+function. Despite advances in surgical interventions, achieving true biological repair of 
+herniated discs remains a major clinical challenge. This review aims to critically examine 
+the biomechanical landscape of disc herniation, focusing on how altered load transmission, 
+tissue stiffness, and structural disruption influence cellular behavior and tissue regenera­
+tion. It further explores mechanobiological mechanisms governing repair and highlights 
+emerging biomimetic models and technologies that integrate mechanical and biological in­
+sights to promote functional disc restoration.
+Methods: A comprehensive literature review was conducted using the Web of Science Core 
+Collection, PubMed (National Library of Medicine), and ScienceDirect databases. The 
+search was limited to peer-reviewed journal articles published in English and focused on 
+studies related to lumbar disc herniation.
+Results: While decades of research have elucidated the biomechanical factors contributing 
+to disc herniation, recent advances in mechanobiology have uncovered how mechanical 
+cues influence cellular behavior, tissue repair, and degeneration. Evidence suggests that 
+true disc regeneration cannot be achieved through biological replacement or mechanical 
+stabilization alone; rather, it requires restoring functional biomechanics, specifically, the 
+disc’s ability to sense, adapt to, and sustain physiological loading.
+Conclusion: Viewing disc herniation through a mechanobiological lens offers new oppor­
+tunities to develop targeted therapies aimed at restoring both tissue integrity and load-bear­
+ing functionality, paving the way for more effective regenerative interventions.
+Keywords: Lumbar spine, Intervertebral disc, Herniation, Mechanobiology, Biomechanics, 
+Regeneration
+INTRODUCTION
+Lumbar disc herniation (LDH), a common and clinically im­
+portant spinal pathology, is a multifactorial disorder that origi­
+nates from a mechanical failure of the disc structure and pro­
+gresses through complex biological responses. While estimates 
+vary depending on the population studied and imaging modal­
+ity used, the annual prevalence of symptomatic LDH, especially 
+Neurospine
+eISSN 2586-6591 
+pISSN 2586-6583 
+This is an Open Access article distributed under 
+the terms of the Creative Commons Attribution 
+Non-Commercial License (https://creativecom­
+mons.org/licenses/by-nc/4.0/) which permits 
+unrestricted non-commercial use, distribution, 
+and reproduction in any medium, provided the 
+original work is properly cited.
+Copyright © 2026 by the Korean Spinal 
+Neurosurgery Society  
+Neurospine 2026;23(1):159-175.
+https://doi.org/10.14245/ns.2551668.834
+
+
+--- Page 2 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+160  www.e-neurospine.org
+with radiculopathy, is often cited in the range of 1% to 3% in 
+the adult population.1 A large-scale study reported the inci­
+dence of laminectomy for LDH in adults at 13 per 10,000 adults 
+per year, depending on age, sex, and other risk factors.2 The 
+point prevalence of symptomatic LDH with radiculopathy esti­
+mates ranging from 2.8 to 218 per 1,000 males depending on 
+source population and case definition.3 Epidemiological studies 
+show that LDH is more common in men than in women, with 
+clinical cohorts reporting higher prevalence among males and 
+earlier literature describing approximately a 2:1 male:female in­
+cidence ratio.4,5
+Treatment of LDH usually starts with conservative manage­
+ment, including activity modification, pain control, physical or 
+chiropractic therapy, and epidural steroid injections. When 
+these fail or in cases with severe or progressive neurological 
+deficits, surgical options such as laminotomy with discectomy 
+are considered.6 Recent randomized trials and meta-analyses 
+show that surgical intervention generally provides more rapid 
+relief of leg pain and improvement in disability compared to 
+nonoperative care, though long-term outcomes may con­
+verge.7,8 Minimally invasive and endoscopic techniques have 
+been shown to have similar efficacy and complication rates to 
+traditional open microdiscectomy, with potential advantages of 
+shorter hospital stay, less intraoperative blood loss, and faster 
+recovery.9-12 Emerging therapies (e.g., biologics such as platelet-
+rich plasma, bone marrow aspirate concentrate, or low-intensi­
+ty pulsed ultrasound) show promise in symptom relief and per­
+haps disc regeneration but currently lack sufficient long-term 
+evidence and standardized protocols.13,14
+Biomechanically, LDH results from a complex interplay of 
+axial compression, torsion, bending, and shear forces, often ac­
+cumulated over years of repetitive loading.15,16 These forces can 
+cause localized annular delamination, radial fissures, and even­
+tual extrusion or sequestration of nuclear material. Recent ad­
+vances in imaging, computational modelling, and experimental 
+biomechanics have provided valuable insights into the struc­
+ture–function relationship of the disc and relevant regenerative 
+strategies.17-20 Finite element models incorporating detailed mi­
+crostructural characteristics of the disc have enabled the pre­
+diction of stress concentrations, annular tears, and bulging be­
+havior under different mechanical loading scenarios.21,22 Al­
+though the mechanical causes of LDH (such as excessive com­
+pression, torsion, and flexion) are well documented, the under­
+lying mechanobiological processes that determine whether a 
+herniated disc degenerates or regenerates remain poorly de­
+fined. Traditionally, LDH has been conceptualized primarily as 
+a structural disorder, managed through mechanical stabiliza­
+tion or tissue replacement. However, the disc is a dynamic, 
+mechanosensitive tissue in which cell behavior, extracellular 
+matrix (ECM) homeostasis, and fluid transport are tightly reg­
+ulated by mechanical cues.23 The disruption of these cues after 
+LDH alters the local stress environment, nutrient exchange, and 
+cellular mechanotransduction, collectively navigating the tissue 
+toward catabolism rather than repair.24,25
+Recent advances in biomechanics and tissue engineering 
+have reshaped our understanding of disc biology, highlighting 
+that effective regeneration depends on restoring disc homeosta­
+sis, including a favorable mechanical microenvironment.26 Me­
+chanical loading not only drives degenerative cascades but also 
+holds the potential to guide repair when appropriately modu­
+lated.27 In this context, the integration of biomechanical and 
+mechanobiological knowledge is essential for improving diag­
+nostic precision, preventive strategies, and the development of 
+functional regenerative strategies.
+This review aims to critically synthesize current understand­
+ing of the biomechanical landscape of disc herniation and the 
+mechanobiological principles governing post-injury regenera­
+tion. We highlight how alterations in tissue mechanics influ­
+ence cellular and molecular responses, discuss recent progress 
+in experimental and computational modelling, and outline 
+emerging strategies that couple biological repair with mechani­
+cal functionality. By reframing LDH as both a mechanical and 
+biological disorder, we aim to provide new insights into the de­
+velopment of next-generation regenerative therapies.
+REVIEW METHODOLOGY
+This critical narrative review employed a structured literature 
+search of the Web of Science Core Collection, PubMed (Na­
+tional Library of Medicine), and ScienceDirect to identify peer-
+reviewed, English-language articles relevant to LDH. These da­
+tabases were selected to provide complementary coverage of 
+biomedical, biomechanical, and engineering literature central 
+to the topic. Databases with substantial content overlap or a 
+primary focus on pharmacological studies (e.g., Embase) were 
+not included, consistent with the narrative scope of the review. 
+Search terms included combinations of “lumbar disc hernia­
+tion,” “biomechanics,” “mechanobiology,” and “regeneration.”
+The search timeframe was limited to publications from 2015 
+to 2025 to emphasize recent methodological and conceptual 
+advances in the field. Seminal earlier studies were incorporated 
+selectively where necessary to provide historical context and 
+
+
+--- Page 3 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   161
+conceptual grounding. Article selection was guided by rele­
+vance to biomechanical and biological mechanisms of disc pa­
+thology and repair, rather than by formal systematic review cri­
+teria. Reference lists of selected articles were manually screened 
+to identify additional relevant studies. This approach was de­
+signed to support a thematic and interpretive synthesis rather 
+than a fully reproducible systematic review.
+THE BIOMECHANICAL LANDSCAPE OF 
+LDH
+Disc functions as a complex load-bearing structure that dis­
+sipates forces through a finely tuned interaction between the 
+nucleus pulposus (NP), annulus fibrosus (AF), and cartilage 
+endplates (EP). Under physiological loading, the NP maintains 
+hydrostatic pressure, allowing uniform transmission of stress to 
+the AF lamellae. LDH occurs when this mechanical equilibri­
+um is disrupted, most often by repetitive or excessive mechani­
+cal loading that exceeds the tissue’s adaptive capacity. Compres­
+sive overload and asymmetric loading are key mechanical driv­
+ers of AF rupture and NP extrusion; as such, LDH is fundamen­
+tally a mechanically driven process arising from the interaction 
+of complex loading scenarios acting on a structurally vulnerable 
+disc.28 Studies have shown that excessive or repetitive mechani­
+cal loading—particularly combined axial compression, flexion, 
+and shear—can disrupt this load-sharing balance, generating 
+localized stresses that exceed the mechanical strength of the AF.29 
+The posterolateral regions of the disc, where lamellae are thin­
+ner, collagen and elastic architecture are weaker, and the poste­
+rior longitudinal ligament provides less reinforcement, are par­
+ticularly susceptible to microstructural damage.30,31 Microdam­
+age accumulation within the lamellae, followed by delamina­
+tion and radial fissuring, represents the mechanical precursor 
+to LDH (Fig. 1).15,30-41 These biomechanical principles explain 
+why herniations predominantly occur at L4–5 and L5–S1, the 
+segments experiencing the highest mechanical demand in the 
+lumbar spine.32 These regions are also subjected to the highest 
+flexion and compressive forces during daily activities such as 
+lifting or bending.
+From the macrostructural point of view, once herniation oc­
+curs, the mechanical environment of the disc undergoes pro­
+found reorganization. The loss of NP material compromises in­
+ternal pressurization, resulting in altered load distribution 
+across the motion segment and contributing to disc height re­
+duction.42 This shift increases compressive stress on the poste­
+rior AF and endplates, while adjacent vertebrae experience 
+higher facet joint loads and instability. Herniated disc material 
+can exacerbate local mechanical strain within the disc, while 
+associated EP deformation and impaired diffusion pathways 
+further compromise disc nutrition.43 Furthermore, herniation 
+compromises the disc’s viscoelastic damping behaviors, thereby 
+reducing its ability to recover shape after deformation. Studies 
+have demonstrated that even small annular defects can signifi­
+cantly reduce disc stiffness, promoting micromotion at the in­
+jured site.44 Importantly, the mechanical threshold for LDH and 
+AF failure is not fixed and is influenced by hydration state, ag­
+ing-related tissue degradation, and local anisotropy in disc mi­
+crostructure (i.e., fiber orientation).45,46 Over time, these biome­
+chanical alterations accelerate degenerative processes and may 
+contribute to recurrent herniation or chronic low back pain. 
+Degenerative changes, such as reduced NP hydration, loss of 
+proteoglycans, or annular stiffening, exacerbate stress concen­
+trations, lowering the threshold for disc failure even under 
+physiological loads.47 Although the natural history of LDH is 
+often favorable, clinical outcomes vary considerably among in­
+dividuals.48 Spontaneous symptom resolution is frequently as­
+sociated with biological resorption of herniated disc material, 
+particularly in extruded or sequestrated herniations, through 
+macrophage-mediated phagocytosis, neovascularization, and 
+matrix remodeling.49,50 Concurrent reductions in inflammatory 
+signaling and mechanical nerve root compression further con­
+tribute to recovery.51 In contrast, persistent symptoms may re­
+flect ongoing mechanical compression, sustained inflammatory 
+activity, impaired disc resorption, failure to restore physiologi­
+cal load transfer, altered mechanobiological responses to load­
+ing, or neural sensitization.49 These observations highlight that 
+LDH outcomes are regulated by dynamic interactions between 
+biological, mechanical, and neural factors rather than disc mor­
+phology alone.
+The relationship between spinal flexion, compression rate, 
+and traumatic disc failure has been extensively investigated.32,52,53 
+Studies have shown that high physiological flexion combined 
+with rapid compressive loading significantly increases the risk 
+of herniation.29 Under these conditions, failure typically origi­
+nates from subtle tears in the mid-to-outer annular region, 
+where collagen fiber strains are highest due to the curvature of 
+the EP and the anisotropic structure of the AF.31 These micro­
+structural tears can propagate under continued mechanical 
+stress, eventually allowing nuclear material to extrude and form 
+a herniation. This mechanistic understanding aligns with clini­
+cal observations of LDH failure anatomy, in which herniation 
+frequently originates at the EP–AF junction rather than from 
+
+
+--- Page 4 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+162  www.e-neurospine.org
+AF rupture.54 Moreover, the findings underscore the impor­
+tance of considering both the magnitude and rate of loading in 
+injury prevention and rehabilitation strategies and they provide 
+a rationale for developing biomechanically informed therapies, 
+such as motion-preserving interventions and targeted regenera­
+tive treatments for AF repair.
+At the microstructural level, AF tears and structural abnor­
+malities disrupt the collagen–elastin network, impairing fiber 
+recruitment and load sharing between adjacent lamellae.55 The 
+EP, which normally distributes compressive forces and facili­
+tates nutrient transport, may also exhibit microfractures, fur­
+ther compromising mechanical and metabolic integrity.54 Col­
+lectively, these structural changes transform the disc from a 
+pressurized, load-bearing structure into a mechanically unsta­
+ble system prone to progressive degeneration. The AF itself ex­
+hibits multiple modes of structural disruption that precede and 
+contribute to LDH, including circumferential tears, delamina­
+tion, radial fissures, and rim lesions.30,31,56 Circumferential tears 
+Fig. 1. Schematic drawings (top and side views) of structural damages and abnormalities during mechanically induced LDH, in­
+cluding NP tracking into the AF (NP migration)15,33; AF-NP interface disintegration30,34; AF radial fissures,35-37 interlamellar delam­
+ination,37,38 localized deformation39,40; and full thickness rupture.31,32,40,41 LHD, lumbar disc herniation; NP, nucleus pulposus; AF, 
+annulus fibrosus.
+    Disc structural failure modes during progression to herniation   
+Top views:
+NP
+NP
+NP
+NP
+NP
+NP
+AF
+AF
+AF
+AF
+AF
+AF
+NP tracking into AF 
+(NP migration)
+Interlamellar 
+delamination
+AF-NP Interface 
+disintegration
+Localised AF 
+deformation
+AF radial annular 
+fissures
+Full thickness AF 
+rupture
+NP
+NP
+NP
+NP
+NP
+NP
+AF
+AF
+AF
+AF
+AF
+AF
+Side views:
+NP tracking into AF 
+(NP migration)
+Interlamellar 
+delamination
+AF-NP Interface 
+disintegration
+Localised AF 
+deformation
+AF radial annular 
+fissures
+Full thickness AF 
+rupture
+
+
+--- Page 5 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   163
+are commonly observed in cadaveric discs from as early as ado­
+lescence, suggesting that lamellar delamination may be one of 
+the earliest events in the cascade leading to disc degeneration 
+and eventual LDH. Mechanistically, these tears are thought to 
+result from high interlamellar shear stresses, which propagate 
+along the boundaries of adjacent lamellae.57 The interlamellar 
+matrix, the connective interface between lamellae, is therefore a 
+critical structural element, serving as the primary site of failure 
+initiation.58,59 Circumferential disruption of the interlamellar 
+matrix not only facilitates lamellar delamination but also pro­
+vides a low-resistance pathway for NP material during hernia­
+tion. Recent microstructural imaging has provided quantitative 
+insights into these processes60 (Fig. 2).
+The regional mechanical properties of the interlamellar ma­
+trix are substantially lower than those of the surrounding la­
+mellae, with this disparity becoming more pronounced as the 
+disc progresses toward LDH.39 Experiments on isolated AF 
+samples show that the failure stress of the interlamellar matrix 
+decreases significantly during the transition from preherniated 
+to herniated states, identifying it as the weakest structural com­
+ponent of the AF.39 Other studies have demonstrated that discs 
+with preexisting AF defects exhibit significantly greater suscep­
+tibility to LDH than discs with an intact AF.55 Such defects 
+compromise the structural integrity of the inner and middle 
+annular layers, reducing their ability to distribute load effective­
+ly. As a result, once the mid-to-outer AF is subjected to elevated 
+stress or repetitive loading, the weakened regions facilitate the 
+propagation of tears and subsequent nuclear material extru­
+sion.56 These findings underscore the critical role of microme­
+chanical heterogeneity within the AF in dictating both the initi­
+ation and progression of disc herniation and they provide a 
+mechanistic basis for targeted studies on prevention, early diag­
+nosis, and repair strategies.
+BIOMECHANICAL FEEDBACK AND 
+DEGENERATIVE PROGRESSION POST-LDH
+LDH initiates a vicious biomechanical-biological feedback 
+loop in which altered disc structure and load distribution in­
+crease abnormal stress and strain on residual disc tissue and 
+surrounding structures, including the facet joints and liga­
+ments. These mechanical changes promote inflammation, cel­
+lular stress, and matrix degradation, driving an imbalance be­
+tween anabolic and catabolic signaling. Elevated shear and ten­
+sile strains upregulate proinflammatory cytokines (e.g., inter­
+leukin [IL]-1β, tumor necrosis factor-α) and matrix-degrading 
+enzymes (MMPs), further weakening the ECM and reducing 
+its load-bearing capacity61 (Fig. 3). The resulting stress redistri­
+bution amplifies local damage, perpetuating degeneration. The 
+reduction in disc height also alters spinal kinematics, increasing 
+segmental mobility and facet joint stress, which can accelerate 
+adjacent-level degeneration.62 Importantly, these biomechanical 
+consequences are not confined to the injured disc, regional me­
+chanical imbalance across the lumbar spine contributes to 
+global postural and loading changes that impede healing.
+From a regenerative standpoint, the postherniation disc mi­
+croenvironment represents a hostile niche for both endogenous 
+and implanted cells, where excessive strain, hypoxia, and acidic 
+pH impair matrix synthesis and cell survival.63 Understanding 
+disc degeneration following LDH requires an integrated per­
+Fig. 2. Lumbar disc herniation (LDH) pathway in ovine discs under realistic loading scenarios, including the initiation at the lat­
+eral region, propagation pathway via the interlamellar matrix of the AF layers and LDH site at the posterolateral region of the 
+disc. LHD, lumbar disc herniation; NP, nucleus pulposus; AF, annulus fibrosus. Reproduced from Tavakoli J, et al. Ann Biomed 
+Eng 2018;46:1280-91, with permission of Springer Nature.39
+
+
+--- Page 6 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+164  www.e-neurospine.org
+spective that considers the biomechanical environment in con­
+junction with biological responses. Mechanical loading is not 
+only a physical stressor but also a potent regulator of cellular 
+and ECM behaviors within the AF.64,65 However, the impact of 
+mechanical stimuli must be interpreted in the context of in­
+flammatory activity, as inflammatory mediators can alter cellu­
+lar mechanosensitivity and impair the tissue’s ability to main­
+tain homeostasis. Few studies have examined the combined ef­
+fects of mechanical loading and proinflammatory conditions 
+on AF structural and functional integrity. One such study used 
+a bovine AF organ culture model to apply cyclic tensile strain 
+under defined proinflammatory conditions.61 The findings of 
+this study demonstrated that the combination of mechanical 
+overload and inflammatory stimulation significantly alters the 
+AF homeostasis, as evidenced by disrupted matrix organiza­
+tion, reduced cell viability, and region-specific changes in the 
+synthesis and spatial distribution of key ECM components. 
+These results indicate a synergistic detrimental effect of me­
+chanical and inflammatory stress, suggesting that the AF is vul­
+nerable to mechano-inflammatory environments. Collectively, 
+these findings provide new evidence that mechanical overload 
+in the presence of inflammation compromises AF integrity, 
+thereby contributing to microstructural weakening and the ear­
+ly pathogenesis of LDH.61 Beyond elucidating the pathomecha­
+nisms underlying LDH, mechanobiology plays a central role in 
+guiding the development of regenerative and tissue engineering 
+strategies aimed at restoring AF integrity after injury. Mechani­
+cal loading is a key determinant of cellular behavior, influenc­
+ing mesenchymal stem cell differentiation, ECM synthesis, and 
+the organization of collagen lamellae, all of which are essential 
+for functional AF repair.64 Incorporating physiologically rele­
+vant mechanical stimuli, such as cyclic tensile strain, hydrostat­
+ic pressure, and compressive loading, into tissue-engineered 
+constructs has been shown to enhance matrix deposition and 
+promote the alignment of collagen fibers that mimic native AF 
+architecture.66 Conversely, inappropriate or excessive loading 
+can impair matrix organization and cell viability, emphasizing 
+the need for precisely controlled biomechanical conditioning 
+Fig. 3. The biomechanical-biological feedback loop post-LDH accelerates disc degeneration. Structural disruption of the annu­
+lus fibrosus and nucleus pulposus alters load distribution and generates abnormal stress and strain within the disc (1). These 
+biomechanical changes are sensed by disc cells through integrin–cytoskeletal coupling and mechanosensitive ion channels (e.g., 
+Piezo/TRPV), activating inflammatory and catabolic signaling pathways. Biological responses include upregulation of proin­
+flammatory cytokines (e.g., IL-1β, TNF-α), induction of matrix-degrading enzymes (e.g., MMP-3, ADAMTS-5), and cellular 
+stress (2). Progressive loss of key ECM components, including aggrecan depletion and collagen II fragmentation, weakens disc 
+microstructure (3), further exacerbating mechanical instability and perpetuating a self-reinforcing degenerative cycle. LHD, 
+lumbar disc herniation; TRPV, transient receptor potential vanilloid; IL, interleukin; TNF, tumor necrosis factor; MMP-3, matrix 
+metalloproteinase-3; ADAMTS-5, a disintegrin and metalloproteinase with thrombospondin motifs-5.
+
+
+--- Page 7 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   165
+during the development of AF repair models.67 Consequently, 
+understanding the mechanical microenvironment is essential 
+not only for preventing LDH but also for designing effective 
+mechanobiologically informed therapies capable of achieving 
+durable AF regeneration and restoring disc function.66
+Thus, successful regeneration requires not only biological re­
+pair but also the restoration of mechanical stability and physio­
+logical load sharing. Recent studies underscore that the capacity 
+for disc healing depends on re-establishing mechanical homeo­
+stasis.26 Restorative biomechanics, achieved through surgical 
+stabilization, biomaterial implantation, or physiologically guid­
+ed loading, may modulate cell mechanosensing pathways, there­
+by promoting anabolic remodeling. Conversely, mechanical en­
+vironments that are too rigid or too compliant can induce stress 
+shielding or overstrain, both detrimental to tissue integration.24 
+Mechanical parameters such as intradiscal pressure, AF tensile 
+strain, and endplate permeability emerge as critical determinants 
+of regenerative success. Optimal load conditions appear to fall 
+within a narrow window: sufficient to stimulate mechanotrans­
+ducive signaling but below the threshold of damage. Identifying 
+and replicating these “proregenerative” mechanical cues remains 
+an unmet challenge that mechanobiology seeks to address. From 
+a mechanobiological perspective, it is believed that optimal disc 
+recovery depends on appropriately dosed mechanical loading.68,69 
+Low-magnitude cyclic loading generally represents a physiologi­
+cal stimulus if activity remains within a pain-tolerable range.69 
+Physiological stimuli support disc nutrition, fluid transport, and 
+matrix homeostasis.70 In contrast, sustained mechanical unload­
+ing or physical inactivity lacks mechanobiological justification, 
+as sustained unloading may impair nutrient diffusion, promote 
+matrix degradation, and exacerbate deconditioning.71-73 Follow­
+ing partial discectomy, a short period of protective loading may 
+be warranted to allow early tissue healing; however, progressive 
+reintroduction of controlled mechanical loading is essential to 
+support mechano-adaptation and functional recovery.74
+MECHANOBIOLOGY OF DISC 
+REGENERATION
+The disc is a mechanically sensitive organ in which resident 
+cells continuously perceive and respond to physical stimuli. 
+Disc cells (NP and AF cells, and EP chondrocytes) translate 
+mechanical forces into biochemical signals through a process 
+known as mechanotransduction.24 This occurs via cell surface 
+receptors (e.g., integrins, stretch-activated ion channels, prima­
+ry cilia), the cytoskeleton, and downstream signaling pathways 
+such as mitogen-activated protein kinase (MAPK), nuclear fac­
+tor-kappa B (NF-κB), and YAP/TAZ (yes-associated protein/
+transcriptional coactivator with PDZ-binding motif).75,76 In ad­
+dition to mechanical disruption, biochemical signaling path­
+ways contribute to the disc microenvironment following LDH, 
+with muscle-derived factors such as irisin influencing NP cell 
+metabolism and matrix turnover.77 However, abnormal or ex­
+cessive mechanical stress activates catabolic pathways, suppress­
+es matrix production, and promotes apoptosis. Studies have 
+shown that hyper-physiological loading elevates MMP expres­
+sion while downregulating aggrecan and collagen II, leading to 
+progressive matrix breakdown.78 Mechanotransduction also 
+governs inflammatory responses within the disc, as mechanical 
+overload induces nuclear translocation of NF-κB and upregula­
+tion of proinflammatory cytokines, further disrupting ECM or­
+ganization.79 Mechanical dysregulation contributes to cytoskel­
+etal disruption of NP cells highlighting the importance of tight­
+ly controlled mechanical cues in maintaining a healthy cellular 
+phenotype.80 These findings underscore the dual role of me­
+chanical stimuli as regulators of homeostasis and as drivers of 
+degeneration.
+Following LDH, the local mechanobiological environment 
+becomes profoundly disrupted. The mechanical integrity of the 
+AF is compromised, NP pressure decreases, and the surround­
+ing tissues experience abnormal strain distributions. These 
+changes directly affect cell viability and function, as cells at the 
+LDH site are exposed to elevated tensile strains and shear 
+stresses beyond their physiological tolerance, leading to necro­
+sis, apoptosis, and senescence. Concurrently, LDH alters the 
+tissue’s biochemical microenvironment. Reduced diffusion 
+through the damaged AF and EP results in hypoxia, glucose 
+deprivation, and accumulation of acidic metabolites.81 These 
+factors synergise with mechanical stress to impair cellular me­
+tabolism and suppress the synthesis of ECM. Mechanically 
+stressed NP cells under acidic, low-nutrient conditions exhibit 
+a shift toward a proinflammatory, catabolic phenotype, marked 
+by increased IL-6, cyclooxygenase-2, and nitric oxide release.82
+The inflammatory response following AF rupture adds an­
+other layer of complexity, as infiltrating immune cells release 
+cytokines and degradative enzymes that further weaken the 
+ECM, altering local mechanical stiffness and thereby perpetu­
+ating abnormal cell mechanosensing. The resulting loss of ap­
+propriate mechanical cues prevents adoption of a regenerative 
+phenotype, reinforcing a cycle of mechanical instability and bi­
+ological degradation.24,76,80 Another major challenge is the loss 
+of the disc’s intrinsic mechanical and material gradient. In 
+
+
+--- Page 8 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+166  www.e-neurospine.org
+healthy discs, stiffness transitions smoothly from the compliant 
+NP to the stiffer AF, allowing uniform stress transfer. LDH dis­
+rupts this gradient, creating stress concentration that hinder 
+tissue integration and ECM remodeling. Without restoration of 
+these mechanical boundaries, even biologically promising re­
+generative approaches may fail to restore function.
+INTEGRATING MECHANOBIOLOGY 
+INTO CLINICAL TRANSLATION
+Recognizing the central role of mechanobiology in disc re­
+pair following LDH has prompted the development of therapies 
+that harness mechanical cues to guide regeneration. Three ma­
+jor directions have emerged: mechanically tuned biomaterials, 
+dynamic loading paradigms, and mechanosensitive cellular 
+therapies.
+Mechanically tuned biomaterials: hydrogels, scaffolds, and 
+injectable biomaterials have been designed to replicate the na­
+tive stiffness and anisotropy of the disc. Gradient hydrogels, 
+for example, mimic the NP–AF transition, enabling spatially 
+controlled stress distribution.83 Materials that degrade or stiffen 
+in response to mechanical loading offer the potential for adap­
+tive regeneration, in which material properties evolve with tis­
+sue healing.84 Importantly, overly rigid implants can induce 
+stress shielding, while overly compliant materials fail to support 
+load transfer, underscoring the need for precise mechanical 
+matching.
+Dynamic loading and rehabilitation: In vitro and ex vivo 
+studies have demonstrated that cyclic compressive loading 
+within physiological magnitudes promotes proteoglycan syn­
+thesis and ECM deposition, whereas static or excessive loading 
+is deleterious.85,86 Mechanically active bioreactors and organ-
+on-chip systems are increasingly used to apply controlled me­
+chanical regimes to disc cells or tissue explants, enabling sys­
+tematic study of proregenerative load profiles.17,87-89 Translation­
+ally, this concept supports the idea that postsurgical or post-im­
+plantation rehabilitation should aim not merely to limit load 
+but to restore physiological loading to re-establish mechanobio­
+logical equilibrium.
+Mechanosensitive cellular therapies: stem cells and progeni­
+tor cells derived from bone marrow, adipose tissue, or the disc 
+itself exhibit mechanoresponsive behavior. Substrate stiffness, 
+strain magnitude, and fluid shear can direct their differentia­
+tion toward NP-like or AF-like phenotypes. Combining these 
+cells with mechanically optimized matrices or dynamic culture 
+conditions enhances their anabolic activity and integration po­
+tential.90-92 However, a persistent challenge lies in maintaining 
+cell functionality under the harsh mechanical and biochemical 
+conditions of the post-LDH niche.
+Despite growing mechanobiological insight, clinical transla­
+tion remains limited. Most regenerative interventions, such as 
+annular closure devices, hydrogel replacements, or biologic in­
+jections, fail to account for the evolving mechanical environ­
+ment of the herniated disc. The absence of standardized me­
+chanical evaluation in preclinical testing contributes to incon­
+sistent outcomes and poor reproducibility. Integrating biome­
+chanical restoration with biological repair represents a promis­
+ing strategy. For example, combining annular closure systems 
+that restore tensile integrity with biomaterials engineered to 
+provide appropriate compressive resistance may help re-estab­
+lish functional load distribution within the disc.93 Computa­
+tional models and finite element simulations can further pre­
+dict how such interventions alter local strain fields, guiding the 
+optimization of material design and implantation strategies.94 
+Ultimately, integrating mechanobiology into regenerative disc 
+therapy requires a paradigm shift from the replacement of lost 
+tissue toward re-establishing a mechanically competent organ. 
+Success will depend on defining mechanical thresholds for cel­
+lular activation, developing materials that dynamically respond 
+to loading, and implementing patient-specific mechanical as­
+Table 1. Representative mechanical loading modes associated with mechanosensors, signaling pathways, and downstream disc 
+cell outcomes
+Model/cell type
+Representative loading range
+Key mechanosensors
+Dominant signaling pathways
+Loading mode: Compression/hydrostatic pressure (cyclic, physiological)68,75,76,95
+NP cells (3D hydrogel); 
+whole-disc organ culture
+0.1–1.0 MPa; 0.1–1 Hz; 
+intermittent (2–4 hr/day)
+Integrins (β1), cytoskeleton/FAK, 
+mechanosensitive ion channels, 
+primary cilia
+MAPK (ERK), Ca2+ signaling, 
+balanced YAP/TAZ activity
+Typical downstream outcomes:
+Anabolic homeostasis: proteoglycan (ACAN)↑, COL2A1↑, maintained hydration and cell viability
+(Continued)
+
+
+--- Page 9 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   167
+Model/cell type
+Representative loading range
+Key mechanosensors
+Dominant signaling pathways
+Loading mode: Compression (static or high-magnitude cyclic; overload)68,78,96
+Whole-disc organ culture; NP 
+and AF cells
+Sustained static compression 
+or high-magnitude cyclic loading 
+beyond the physiological window
+Integrins, stretch-activated ion 
+channels (e.g., Piezo/TRP), 
+and cytoskeletal stress fibers
+NF-κB, p38/JNK MAPK, 
+oxidative stress pathways
+Typical downstream outcomes:
+Catabolic shift: MMP1/MMP3↑, TIMP imbalance, ECM breakdown, apoptosis/senescence
+Loading mode: Shear stress (cyclic or sustained)80,97
+AF cells in vitro; disc-on-chip 
+systems
+Device-dependent shear stress; 
+higher shear associated with 
+degeneration models
+Integrins, cytoskeleton, 
+mechanosensitive ion channels, 
+primary cilia
+Ca2+-dependent signaling, 
+MAPK, NF-κB
+Typical downstream outcomes:
+Dose-dependent response: moderate shear supports matrix organization; excessive shear promotes inflammation and collagen remodeling
+Loading mode: Torsion (cyclic, low vs. high amplitude)80,98
+Whole-disc organ culture (NP vs. 
+AF regions)
+Low torsion (2°) vs. high torsion 
+(5°); 0.1 Hz; 1 hr/day (reported 
+ranges)
+Integrins, cytoskeleton, AF 
+lamellar architecture (structural 
+mechanosensing)
+MAPK, NF-κB; region-specific 
+YAP/TAZ modulation
+Typical downstream outcomes:
+Regional sensitivity: AF remodeling under moderate torsion; NP apoptosis and catabolism under high torsion
+Loading mode: Tensile strain (cyclic; AF-focused)99,100
+AF cells in vitro; AF tissue injury 
+models
+Wide protocol range: high strain 
+linked to damage accumulation
+Integrins (β1), caveolae, 
+cytoskeleton
+MAPK, NF-κB; YAP-mediated 
+regulation of inflammatory 
+signaling
+Typical downstream outcomes:
+Strain-dependent effects: moderate strain supports alignment and survival; high strain induces apoptosis and inflammatory mediators
+Loading mode: Multiaxial complex loading (compression, shear, and torsion)101
+Whole-disc organ culture; 
+computational–experimental 
+models
+Combined loading mimicking 
+physiological motion or injury 
+scenarios
+Integrins, mechanosensitive ion 
+channels, cytoskeleton
+NF-κB, MAPK, 
+mechano-metabolic coupling 
+pathways
+Typical downstream outcomes:
+Degenerative cascade: stress concentration, matrix damage, inflammation, impaired regeneration
+Loading mode: Mechanical stress combined with microenvironment (acidic pH, low nutrients)81
+NP cells; degeneration and 
+herniation models
+Mechanical overload under 
+hypoxia, low glucose, acidic pH
+Ion channels (Piezo/TRP), 
+integrins, mitochondrial stress 
+sensors
+NF-κB, inflammasome-related 
+signaling, metabolic stress 
+pathways
+Typical downstream outcomes: amplified catabolism: IL-6, COX-2, NO↑; suppressed ECM synthesis
+Loading mode: Physiological loading with biochemical crosstalk (muscle–disc signaling)77
+Human NP cells
+Physiological mechanical context 
+with myokine exposure
+Integrins, mechanosensitive 
+signaling interfaces
+MAPK, metabolic-mechanical 
+crosstalk
+Typical downstream outcomes:
+Enhanced anabolic responsiveness: PG synthesis↑, improved NP cell metabolism
+Reported ranges reflect commonly used in vitro and ex vivo regimes; thresholds vary by species, disc level, culture configuration, and baseline 
+degeneration.
+NP, nucleus pulposus; 3D, 3-dimensional; FAK, focal adhesion kinase; MAPK, mitogen-activated protein kinase; YAP/TAZ, yes-associated pro­
+tein/transcriptional coactivator with PDZ-binding motif; ACAN, aggrecan; COL2A1, type II collagen alpha 1; AF, annulus fibrosus; TRP, tran­
+sient receptor potential (channels); NF-κB, nuclear factor-kappa B; JNK, c-Jun N-terminal kinase; MMP, matrix metalloproteinase; TIMP, tissue 
+inhibitor of metalloproteinases; ECM, extracellular matrix; IL-6, interleukin 6; COX-2, cyclooxygenase-2; NO, nitric oxide; PG, proteoglycan. 
+Table 1. Representative mechanical loading modes associated with mechanosensors, signaling pathways, and downstream disc 
+cell outcomes (Continued)
+
+
+--- Page 10 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+168  www.e-neurospine.org
+sessments in both research and clinical practice.
+Table 1 summarizes representative loading modes (compres­
+sion, shear, torsion; static vs. cyclic), associated biological path­
+ways, and reported outcomes, including anabolic matrix syn­
+thesis (e.g., proteoglycans and aggrecan), catabolic remodeling 
+(MMP/ADAMTS), inflammation, and apoptosis/senescence. 
+Reported loading windows frequently cluster around moderate 
+cyclic compression or hydrostatic pressure, whereas sustained 
+static loading or high-magnitude multiaxial regimes preferen­
+tially induce NF-κB/MAPK-linked catabolic programmers and 
+cell death.95-101 Table 2 further summarizes NP, AF, and EP phe­
+notypes, representative ECM markers, and key post-LDH mi­
+croenvironmental constraints that bias cells toward catabolic/
+inflammatory or anabolic phenotypes.24,68,102-108
+The translation of mechanobiological insights into clinical 
+practice demands models that capture the complexity of the 
+human disc while remaining experimentally tractable. Although 
+animal and cadaveric studies provide useful boundary condi­
+tions, they often fail to replicate the chronic loading environ­
+ment and biological nuances of the human spine. Accordingly, 
+advanced ex vivo and micro-engineered systems should be viewed 
+as essential complementary translational tools rather than labo­
+ratory curiosities.41 Conventional in vivo models have provided 
+valuable insights into LDH and degeneration; however, they are 
+limited by anatomical variability, ethical constraints, and diffi­
+culties in controlling mechanical and biochemical parameters. 
+As a result, ex vivo and in vitro systems have emerged as indis­
+pensable tools for dissecting the mechanobiological processes 
+underlying disc injury and regeneration.87 Whole-disc organ 
+culture systems preserve native architecture, enabling controlled 
+mechanical loading and nutrient supply while maintaining cel­
+lular viability.109 These systems allow the application of static or 
+injurious compressive loading to model degenerative disc con­
+ditions.110 Using such models, studies have shown that moder­
+ate cyclic loading preserves disc hydration and ECM synthesis, 
+whereas excessive or static compression accelerates catabolism. 
+Importantly, organ cultures can be coupled with real-time im­
+aging and biochemical analyses, providing a valuable bridge 
+between cellular studies and whole-tissue biomechanics.111-113 
+At the cellular level, 3-dimensional hydrogels, scaffolds, and en­
+Table 2. Disc cell biology primer: NP, AF, and EP phenotypes and the post-LDH niche
+Tissue compartments and dominant cell phenotypes
+NP: Gel-like, highly hydrated region optimized for compressive load distribution. NP cells are chondrocyte-like with an ECM program 
+enriched for aggrecan/proteoglycans (ACAN) and type II collagen (COL2A1) (often with SOX9-associated chondrogenic regulation in 
+many models).102,103
+AF: Fibrocartilaginous lamellae with aligned collagen bundles supporting tensile and shear loads. AF cells (particularly outer AF) are 
+associated with a more fibrous matrix profile enriched in type I collagen (COL1A1) and related fibrillar collagens, consistent with their 
+tensile role.102,104
+EP: Thin hyaline-cartilage-like interface controlling transport between vertebral body and disc; EP chondrocytes maintain a cartilage-like 
+ECM (often described with COL2/ACAN features) and are central to nutrient diffusion constraints.102,103
+Representative ECM components and markers (high-level)
+NP: ACAN (proteoglycans) controls hydration and osmotic swelling; COL2A1; matrix homeostasis genes in pro-anabolic states.24
+AF: COL1A1-dominant fibrillar collagen network (especially outer AF), with remodeling enzymes upregulated during degeneration or injury.102,105
+EP: cartilage-like ECM and transport regulation; degeneration or calcification impairs diffusion and shifts disc cell biology toward stress 
+phenotypes.102,106
+Key microenvironmental constraints relevant to herniation or annular defects
+Hypoxia/limited vascularity: The disc is largely avascular; oxygen gradients shape basal metabolism and stress susceptibility.102,103
+Nutrient limitation (low glucose) and transport dependence on EP/AF integrity: Transport constraints worsen with EP changes and annular 
+disruption, compounding metabolic stress.102,106
+Acidic pH/metabolite accumulation: Reduced diffusion and altered loading can promote accumulation of acidic metabolites; acidic and 
+low-nutrient conditions potentiate inflammatory-catabolic shifts under mechanical stress.102
+Mechanobiology and microenvironment coupling
+Toward anabolic/homeostatic: Moderate cyclic compression or hydrostatic pressure supports ECM synthesis and hydration maintenance, 
+partly by sustaining balanced mechanotransduction rather than sustained NF-κB stress signaling.68
+Toward catabolic/inflammatory: Static overload, high-magnitude complex loading, and/or mechanically disrupted matrices promote 
+NF-κB/MAPK-linked inflammation, matrix-degrading enzyme induction (MMP/ADAMTS), and cell death/senescence. Mechanosensitive 
+ion channels (e.g., Piezo1) provide a mechanistic route linking aberrant mechanical stress to Ca²+-dependent inflammatory cascades.105,107,108
+
+
+--- Page 11 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   169
+gineered microtissues offer controlled environments for study­
+ing mechanotransduction in disc cells. These constructs permit 
+systematic variation of substrate stiffness, strain, and shear to 
+define mechanical thresholds for anabolic versus catabolic re­
+sponses. Coculture systems incorporating multiple disc cell 
+populations within mechanically heterogeneous environments 
+enable exploration of cross-tissue mechanobiological commu­
+nication, a critical yet understudied factor in disc repair.114,115 
+More recently, microfluidic platforms have been developed to 
+recapitulate the intervertebral disc’s physiological complexity at 
+the microscale. These devices integrate channels, stiffness gra­
+dients, and dynamic loading mechanisms, allowing simultane­
+ous control of oxygen, glucose, pH, and mechanical stress.87,116,117 
+Such systems are ideally suited to investigate the interplay be­
+tween mechanical forces and the harsh biochemical microenvi­
+ronment following LDH. They also offer opportunities for high 
+throughput testing of regenerative materials and drugs under 
+defined mechanobiological conditions. The integration of real-
+time sensors for strain, pressure, and pH further enhances their 
+utility for continuous monitoring of cellular responses.
+Clinically, these models can inform the design of implants, 
+annular closure systems, and injectable biomaterials by provid­
+ing a mechanobiologically relevant testing platform. For exam­
+ple, disc-on-a-chip systems can be used to prescreen biomateri­
+als under physiologically relevant mechanical and biochemical 
+conditions before progressing to animal trials.87,118 Similarly, 
+computational models can assist surgeons in evaluating how 
+specific repair techniques alter segmental mechanics, potential­
+ly reducing the risk of recurrent LDH.94 Modern finite element 
+models incorporate anisotropic material properties, nonlinear 
+viscoelastic behavior, and realistic geometries derived from pa­
+tient imaging. Parametric studies using these models have iden­
+tified critical regions of high shear and tensile stress within the 
+posterolateral AF, supporting experimental observations of typ­
+ical herniation sites. Moreover, coupling computational models 
+with biological data enables the simulation of mechanobiologi­
+cal processes, such as ECM turnover, inflammation, and nutri­
+ent transport, across a range of loading conditions.119 This mul­
+tiphysics framework offers a powerful means of predicting how 
+mechanical interventions, such as implants and injections, in­
+fluence both mechanical stability and biological outcomes.
+The integration of experimental and computational technol­
+ogies is moving the field toward precision mechanobiology, 
+where patient-specific anatomy, load profiles, and cellular re­
+sponses are considered simultaneously. Ultimately, this conver­
+gence may enable the development of personalized regenera­
+tive therapies capable of restoring both biological integrity and 
+mechanical competence of the spinal motion segment. The 
+emerging use of machine learning and artificial intelligence 
+(AI)-driven modelling further extends these capabilities.120,121 
+By integrating patient-specific imaging, motion data, and tissue 
+properties, AI models can predict LDH risk, progression, and 
+response to therapeutic interventions. Such computational 
+tools hold promises for personalized load management and the 
+design of individualized regenerative strategies.
+CRITICAL PERSPECTIVES AND FUTURE 
+DIRECTIONS
+Despite significant advances in understanding the biome­
+chanics and mechanobiology of LDH, meaningful translation 
+of regenerative strategies into completed clinical trials remains 
+limited.122 Much of the current research continues to address 
+either the mechanical or biological dimensions in isolation, 
+overlooking the interdependence that governs tissue behavior. 
+The next phase of innovation in disc repair requires bridging 
+these domains through integrated, multiscale approaches that 
+combine structural, cellular, and molecular perspectives.
+A major limitation in the field lies in the lack of standardiza­
+tion across regenerative studies, with many interventions focus­
+ing on biological outcomes while providing limited assessment 
+of the associated mechanical environment.123 Without this me­
+chanical context, it is difficult to assess whether apparent bio­
+logical “repair” restores functional competence. Defining mech­
+anobiological benchmarks, such as optimal intradiscal pressure 
+or annular tensile strain, would improve cross-study compara­
+bility and clinical translation.92 Another critical challenge is the 
+temporal evolution of the mechanical environment following 
+LDH. Most models assess static endpoints, whereas the disc’s 
+loading environment evolves continuously during healing and 
+degeneration.24,75 Time-resolved measurements of mechanical 
+and biological parameters, supported by computational simula­
+tions, could help elucidate the dynamic feedback loops that de­
+termine whether repair stabilizes or fails.94 In parallel, longitu­
+dinal mechanobiological monitoring using imaging or biosen­
+sors may provide early indicators of regenerative success. From 
+a regenerative design perspective, there is a pressing need for 
+mechanically intelligent biomaterials that not only withstand 
+loading but dynamically adapt to it. Next-generation biological 
+modalities may integrate mechanoresponsive elements capable 
+of stiffening, softening, or releasing bioactive molecules in re­
+sponse to physiologically relevant cues.124 When combined with 
+
+
+--- Page 12 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+170  www.e-neurospine.org
+mechanosensitive cells, these systems may recapitulate the disc’s 
+inherent capacity to remodel in response to mechanical cues. 
+Likewise, integrating biophysical stimulation, including dy­
+namic compression or ultrasound, with biological therapies 
+may help restore physiological mechanotransduction and en­
+hance matrix synthesis.124 In addition, emerging cell-free thera­
+peutic strategies show remarkable promise and warrant further 
+investigation as potential treatments for disc degeneration.125 To 
+accelerate translation, interdisciplinary collaboration is essen­
+tial. Biomechanists, biologists, material scientists, and clinicians 
+must work within a unified mechanobiological framework. In­
+corporating quantitative biomechanics into clinical decision-
+making—through patient-specific modelling, motion analysis, 
+and imaging—can transform how we define “successful” regen­
+eration, shifting the focus from structural repair alone to resto­
+ration of mechanical and biological harmony.
+CONCLUSION
+LDH is a mechanical failure of a biological system. Its pro­
+gression and regenerative potential are governed by the delicate 
+interplay between load distribution, ECM integrity, and cellular 
+mechanotransduction. Decades of research have established the 
+biomechanical causes of LDH, yet only recently has mechano­
+biology revealed how mechanical cues dictate cellular fate and 
+tissue repair. The disc regeneration will not be achieved through 
+biological replacement or mechanical stabilization alone. In­
+stead, it demands strategies that re-establish functional biome­
+chanics, the capacity of the disc to sense, adapt to, and sustain 
+physiological loading. Emerging tools such as organ-on-a-chip 
+systems, mechanosensitive biomaterials, cell-free strategies, and 
+integrative computational models are beginning to provide the 
+experimental and translational foundation for this paradigm 
+shift. By viewing LDH through the lens of mechanobiology, re­
+searchers and clinicians can move beyond symptomatic man­
+agement toward therapies that restore both structural and func­
+tional integrity.
+NOTES
+Conflict of Interest: The authors have nothing to disclose.
+Funding/Support: This study received no specific grant from 
+any funding agency in the public, commercial, or not-for-profit 
+sectors.
+Author Contribution: Conceptualization: GV, FR, IHH, AJ, 
+JT; Formal analysis: GV, FR, IHH, AJ, JT; Funding acquisition: 
+AO Spine Knowledge Forum Degenerative; Methodology: GV, 
+FR, IHH, AJ, JT; Visualization: GV, FR, IHH, AJ, JT; Writing – 
+original draft: JT; Writing – review & editing: GV, FR, IHH, AJ.
+ORCID 
+Gianluca Vadala: 0000-0001-7142-1660
+Fabrizio Russo: 0000-0002-8566-8952
+In-Ho Han: 0000-0002-0834-9325
+Amit Jain: 0000-0002-9983-3365
+Javad Tavakoli: 0000-0002-0696-6530
+REFERENCES
+1. 	Zhang AS, Xu A, Ansari K, et al. Lumbar disc herniation: 
+diagnosis and management. Am J Med 2023;136:645-51.
+2. 	Heo KY, Bonsu JM, Khawaja S, et al. Database analysis 
+comparing incidence and complication rates between in­
+patient and outpatient laminotomies for lumbar disc her­
+niation. N Am Spine Soc J 2024;18:100328.
+3. 	Hincapié CA, Kroismayr D, Hofstetter L, et al. Incidence 
+of and risk factors for lumbar disc herniation with radicu­
+lopathy in adults: a systematic review. Eur Spine J 2025;34:
+263-94.
+4. 	Sun BL, Zhang Y, Zhang N, et al. Prevalence of lumbar 
+disc herniation in populations with different symptoms 
+based on magnetic resonance imaging study. J Clin Neu­
+rosci 2024;129:110839.
+5. 	Jordan J, Konstantinou K, O’Dowd J. Herniated lumbar 
+disc. BMJ Clin Evid 2009;2009.
+6. 	Lee JJ, Chang MC, Shin DA, et al. Evidence-based clinical 
+practice guidelines for patients with lumbar disc hernia­
+tion with radiculopathy in South Korea. Neurospine 2025;
+22:366-83.
+7. 	Thavarajasingam SG, Salih A, Arif A, et al. Indications for 
+surgery versus conservative treatment in the management 
+of lumbar disc herniations: a systematic review. Brain Spine 
+2025;5:105619.
+8. 	Song K, Liang J, Zhang M, et al. Comparison of different 
+treatments for lumbar disc herniation: a network meta-
+analysis and systematic review. BMC Surg 2025;25:259.
+9. 	Liu S, Zhou J. Comparative efficacy and safety of three sur­
+gical procedures for the treatment of lumbar disc hernia­
+tion: a Bayesian-based network analysis. BMC Surg 2025;
+25:125.
+10.	Kim M, Lee S, Kim HS, et al. A comparison of percutane­
+ous endoscopic lumbar discectomy and open lumbar mi­
+
+
+--- Page 13 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   171
+crodiscectomy for lumbar disc herniation in the Korean: a 
+meta-analysis. Biomed Res Int 2018;2018:9073460.
+11.	Rao P, Maharaj MM, Maalouly J. Endoscopic lumbar dis­
+cectomy vs microdiscectomy: early results, complications 
+and learning curve an Australian perspective. Interdiscip 
+Neurosurg 2023;31:101674.
+12.	Ambrosio L, Vadalà G, de Rinaldis E, et al. Discectomy 
+versus sequestrectomy in the treatment of lumbar disc 
+herniation: a systematic review and meta-analysis. Spine J 
+2025;25:211-26.
+13.	Lee JS, Lee SB, Kang KY, et al. Review of recent treatment 
+strategies for lumbar disc herniation (LDH) focusing on 
+nonsurgical and regenerative therapies. J Clin Med 2025;
+14:1196.
+14.	Tavakoli J, Diwan AD, Tipper JL. Advanced strategies for 
+the regeneration of lumbar disc annulus fibrosus. Int J Mol 
+Sci 2020;21:4889.
+15.	Amin DB, Tavakoli J, Freeman BJC, et al. Mechanisms of 
+failure following simulated repetitive lifting: a clinically 
+relevant biomechanical cadaveric study. Spine (Phila Pa 
+1976) 2020;45:357-67.
+16.	Wilke HJ, Kienle A, Maile S, et al. A new dynamic six de­
+grees of freedom disc-loading simulator allows to provoke 
+disc damage and herniation. Eur Spine J 2016;25:1363-72.
+17.	Vadalà G, Russo F, Pattappa G, et al. A nucleotomy model 
+with intact annulus fibrosus to test intervertebral disc re­
+generation strategies. Tissue Eng Part C Methods 2015;21:
+1117-24.
+18.	Cyril D, Giugni A, Bangar SS, et al. Elastic fibers in the in­
+tervertebral disc: from form to function and toward regen­
+eration. Int J Mol Sci 2022;23:8931.
+19.	Cachot U, Kandil K, Zaïri F, et al. A multiscale finite ele­
+ment model of fluid-microstructure interactions in human 
+intervertebral disc compression. Acta Biomater 2025;207:
+398-413.
+20.	Mirzaeipoueinak M, Mordechai HS, Bangar SS, et al. Struc­
+ture-function characterization of the transition zone in the 
+intervertebral disc. Acta Biomater 2023;160:164-75.
+21.	Zou Y, Ji S, Yang HW, et al. Biomechanical evaluation of 2 
+endoscopic spine surgery methods for treating lumbar disc 
+herniation: a finite element study. Neurospine 2024;21:
+273-85.
+22.	Ghezelbash F, Eskandari AH, Shirazi-Adl A, et al. Model­
+ing of human intervertebral disc annulus fibrosus with 
+complex multi-fiber networks. Acta Biomater 2021;123:
+208-21.
+23.	Vadalà G, Russo F, Di Martino A, et al. Intervertebral disc 
+regeneration: from the degenerative cascade to molecular 
+therapy and tissue engineering. J Tissue Eng Regen Med 
+2015;9:679-90.
+24.	Fearing BV, Hernandez PA, Setton LA, et al. Mechanotrans­
+duction and cell biomechanics of the intervertebral disc. 
+JOR Spine 2018;1:e1026.
+25.	Kang JD, Stefanovic-Racic M, McIntyre LA, et al. Toward 
+a biochemical understanding of human intervertebral disc 
+degeneration and herniation. Contributions of nitric ox­
+ide, interleukins, prostaglandin E2, and matrix metallo­
+proteinases. Spine (Phila Pa 1976) 1997;22:1065-73.
+26.	Lyu FJ, Cheung KM, Zheng Z, et al. IVD progenitor cells: 
+a new horizon for understanding disc homeostasis and re­
+pair. Nat Rev Rheumatol 2019;15:102-12.
+27.	Schnake KJ, Putzier M, Haas NP, et al. Mechanical concepts 
+for disc regeneration. Eur Spine J 2006;15 Suppl 3(Suppl 3):
+S354-60.
+28.	Shan Z, Wade KR, Schollum ML, et al. A more realistic 
+disc herniation model incorporating compression, flexion 
+and facet-constrained shear: a mechanical and microstruc­
+tural analysis. Part II: high rate or ‘surprise’ loading. Eur 
+Spine J 2017;26:2629-41.
+29.	Wade KR, Schollum ML, Robertson PA et al. A more real­
+istic disc herniation model incorporating compression, 
+flexion and facet-constrained shear: a mechanical and mi­
+crostructural analysis. Part I: Low rate loading. Eur Spine J 
+2017;26:2616-28.
+30.	van Heeswijk VM, Thambyah A, Robertson PA, et al. Pos­
+terolateral disc prolapse in flexion initiated by lateral inner 
+annular failure: an investigation of the herniation pathway. 
+Spine (Phila Pa 1976) 2017;42:1604-13.
+31.	Wade KR, Robertson PA, Thambyah A, et al. How healthy 
+discs herniate: a biomechanical and microstructural study 
+investigating the combined effects of compression rate and 
+flexion. Spine (Phila Pa 1976) 2014;39:1018-28.
+32.	Wade KR, Robertson PA, Thambyah A, et al. “Surprise” 
+loading in flexion increases the risk of disc herniation due 
+to annulus-endplate junction failure: a mechanical and 
+microstructural investigation. Spine (Phila Pa 1976) 2015;
+40:891-901.
+33.	Callaghan JP, McGill SM. Intervertebral disc herniation: 
+studies on a porcine model exposed to highly repetitive 
+flexion/extension motion with compressive force. Clin 
+Biomech (Bristol) 2001;16:28-37.
+34.	Tampier C, Drake JD, Callaghan JP, et al. Progressive disc 
+
+
+--- Page 14 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+172  www.e-neurospine.org
+herniation: an investigation of the mechanism using radio­
+logic, histochemical, and microscopic dissection techniques 
+on a porcine model. Spine (Phila Pa 1976) 2007;32:2869-74.
+35.	Iatridis JC, ap Gwynn I. Mechanisms for mechanical dam­
+age in the intervertebral disc annulus fibrosus. J Biomech 
+2004;37:1165-75.
+36.	Fazzalari NL, Costi JJ, Hearn TC, et al. Mechanical and 
+pathologic consequences of induced concentric anular 
+tears in an ovine model. Spine (Phila Pa 1976) 2001;26:
+2575-81.
+37.	Veres SP, Robertson PA, Broom ND. ISSLS prize winner: 
+how loading rate influences disc failure mechanics: a mi­
+crostructural assessment of internal disruption. Spine (Ph­
+ila Pa 1976) 2010;35:1897-908.
+38.	Veres SP, Robertson PA, Broom ND. ISSLS prize winner: 
+microstructure and mechanical disruption of the lumbar 
+disc annulus: part II: how the annulus fails under hydro­
+static pressure. Spine (Phila Pa 1976) 2008;33:2711-20.
+39.	Tavakoli J, Amin DB, Freeman BJC, et al. The biomechan­
+ics of the inter-lamellar matrix and the lamellae during 
+progression to lumbar disc herniation: which is the weak­
+est structure? Ann Biomed Eng 2018;46:1280-91.
+40.	Veres SP, Robertson PA, Broom ND. The morphology of 
+acute disc herniation: a clinically relevant model defining 
+the role of flexion. Spine (Phila Pa 1976) 2009;34:2288-96.
+41.	Slater TD, Wilke HJ, Gurusamy G, et al. Lumbar disc her­
+niation modelling: a review of ex-vivo mechanical models 
+and a comparison with clinical data. Eur Spine J 2025;34:
+4353-68.
+42.	Deneuville JP, Billot M, Cervantes A, et al. Dynamic be­
+havior of the nucleus pulposus within the intervertebral 
+disc loading: a systematic review and meta-analysis ex­
+ploring the concept of dynamic disc model. Front Bioeng 
+Biotechnol 2025;13:1582438.
+43.	Rajasekaran S, Ramachandran K, K S SVA, et al. From 
+Modic to disc endplate bone marrow complex - the natu­
+ral course and clinical implication of vertebral endplate 
+changes. Global Spine J 2025;15:196-209.
+44.	Nie MD, Huang ZB, Cheng RS, et al. Shape and size of the 
+annulus fibrosus excision alters the biomechanics of the 
+intervertebral disc. Global Spine J 2025;15:1895-904.
+45.	Kawaguchi K, Saiwai H, Kobayakawa K, et al. Association 
+between histological composition and clinical symptoms 
+in lumbar disk herniation in different age groups. Spine 
+(Phila Pa 1976) 2025;50:1153-60.
+46.	Zhou M, Theologis AA, O’Connell GD. Understanding 
+the etiopathogenesis of lumbar intervertebral disc hernia­
+tion: from clinical evidence to basic scientific research. 
+JOR Spine 2024;7:e1289.
+47.	Rosenström AHC, Ahmed AS, Kultima K, et al. Unravel­
+ing the neuroimmune interface in chronic pain-the associ­
+ation between cytokines in the cerebrospinal fluid and 
+pain in patients with lumbar disk herniation or degenera­
+tive disk disease. Pain 2024;165:e65-79.
+48.	Weber H. Lumbar disc herniation. A controlled, prospec­
+tive study with ten years of observation. Spine (Phila Pa 
+1976) 1983;8:131-40.
+49.	Zhong M, Liu JT, Jiang H, et al. Incidence of spontaneous 
+resorption of lumbar disc herniation: a meta-analysis. Pain 
+Physician 2017;20:E45-52.
+50.	Shamji MF, Setton LA, Jarvis W, et al. Proinflammatory 
+cytokine expression profile in degenerated and herniated 
+human intervertebral disc tissues. Arthritis Rheum 2010;
+62:1974-82.
+51.	Ohtori S, Suzuki M, Koshi T, et al. Proinflammatory cyto­
+kines in the cerebrospinal fluid of patients with lumbar ra­
+diculopathy. Eur Spine J 2011;20:942-6.
+52.	Berger-Roscher N, Casaroli G, Rasche V, et al. Influence of 
+complex loading conditions on intervertebral disc failure. 
+Spine (Phila Pa 1976) 2017;42:E78-85.
+53.	Schollum ML, Wade KR, Robertson PA, et al. A micro­
+structural investigation of disc disruption induced by low 
+frequency cyclic loading. Spine (Phila Pa 1976) 2018;43:
+E132-42.
+54.	Rajasekaran S, Bajaj N, Tubaki V, et al. ISSLS Prize winner: 
+the anatomy of failure in lumbar disc herniation: an in vivo, 
+multimodal, prospective study of 181 subjects. Spine (Phila 
+Pa 1976) 2013;38:1491-500.
+55.	Wade K, Berger-Roscher N, Rasche V, et al. Disc wall struc­
+tural abnormalities can act as initiation sites for herniation. 
+Eur Cell Mater 2020;40:227-38.
+56.	Wade K, Berger-Roscher N, Saggese T, et al. How annulus 
+defects can act as initiation sites for herniation. Eur Spine J 
+2022;31:1487-500.
+57.	Tavakoli J, Elliott DM, Costi JJ. Structure and mechanical 
+function of the inter-lamellar matrix of the annulus fibro­
+sus in the disc. J Orthop Res 2016;34:1307-15.
+58. Tavakoli J, Costi JJ. New findings confirm the viscoelastic 
+behaviour of the inter-lamellar matrix of the disc annulus 
+fibrosus in radial and circumferential directions of load­
+ing. Acta Biomater 2018;71:411-9.
+59.	Tavakoli J, Elliott DM, Costi JJ. The ultra-structural orga­
+
+
+--- Page 15 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   173
+nization of the elastic network in the intra- and inter-la­
+mellar matrix of the intervertebral disc. Acta Biomater 
+2017;58:269-77.
+60.	Berger-Roscher N, Galbusera F, Rasche V, et al. Interverte­
+bral disc lesions: visualisation with ultra-high field MRI at 
+11.7 T. Eur Spine J 2015;24:2488-95.
+61.	Saggese T, Teixeira GQ, Wade K, et al. GEORG SCHMORL 
+PRIZE OF THE GERMAN SPINE SOCIETY (DWG) 
+2018: combined inflammatory and mechanical stress 
+weakens the annulus fibrosus: evidences from a loaded bo­
+vine AF organ culture. Eur Spine J 2019;28:922-33.
+62.	Huang X, Cai Y, Chen K, et al. Risk factors and treatment 
+strategies for adjacent segment disease following spinal fu­
+sion (review). Mol Med Rep 2025;31:33.
+63.	Vadalà G, Ambrosio L, Russo F, et al. Interaction between 
+mesenchymal stem cells and intervertebral disc microen­
+vironment: from cell therapy to tissue engineering. Stem 
+Cells Int 2019;2019:2376172.
+64.	Deng R, Kang R, Jin X, et al. Mechanical stimulation pro­
+motes MSCs healing the lesion of intervertebral disc an­
+nulus fibrosus. Front Bioeng Biotechnol 2023;11:1137199.
+65.	Duclos SE, Michalek AJ. Residual strains in the interverte­
+bral disc annulus fibrosus suggest complex tissue remodel­
+ing in response to in-vivo loading. J Mech Behav Biomed 
+Mater 2017;68:232-8.
+66.	Liu F, Chao S, Yang L, et al. Molecular mechanism of me­
+chanical pressure induced changes in the microenviron­
+ment of intervertebral disc degeneration. Inflamm Res 
+2024;73:2153-64.
+67.	Haque MA, Li JF, Gao M, et al. Preparation of interverte­
+bral disc organoid and regeneration mechanism based on 
+gradient structure and mechanical function guidance: a 
+review. Adv Orthop 2025;2:109-16.
+68.	Chan SC, Ferguson SJ, Gantenbein-Ritter B. The effects of 
+dynamic loading on the intervertebral disc. Eur Spine J 
+2011;20:1796-812.
+69.	Iatridis JC, MacLean JJ, Roughley PJ, et al. Effects of me­
+chanical loading on intervertebral disc metabolism in vivo. 
+J Bone Joint Surg Am 2006;Suppl 2(0 2):41-6.
+70.	Sampson SL, Sylvia M, Fields AJ. Effects of dynamic load­
+ing on solute transport through the human cartilage end­
+plate. J Biomech 2019;83:273-9.
+71.	Che YJ, Li HT, Liang T, et al. Intervertebral disc degenera­
+tion induced by long-segment in-situ immobilization: a 
+macro, micro, and nanoscale analysis. BMC Musculoskelet 
+Disord 2018;19:308.
+72.	Belavý DL, Bansmann PM, Böhme G, et al. Changes in in­
+tervertebral disc morphology persist 5 mo after 21-day 
+bed rest. J Appl Physiol (1985) 2011;111:1304-14.
+73.	Kordi M, Belavý DL, Armbrecht G, et al. Loss and re-ad­
+aptation of lumbar intervertebral disc water signal intensi­
+ty after prolonged bedrest. J Musculoskelet Neuronal In­
+teract 2015;15:294-300.
+74.	Dupeyron A, Ribinik P, Rannou F, et al. Rehabilitation and 
+lumbar surgery: the French recommendations for clinical 
+practice. Ann Phys Rehabil Med 2021;64:101548.
+75.	Yu Q, Duan Y, Zhu Z, et al. Multimodal mechanoregula­
+tion strategies towards tissue regeneration. Mechanobiol 
+Med 2025;3:100159.
+76.	Kumar R, Sporn K, Kaur H, et al. Current mechanobiolog­
+ical pathways and therapies driving spinal health. Bioengi­
+neering (Basel) 2025;12:886.
+77.	Vadalà G, Di Giacomo G, Ambrosio L, et al. Effect of irisin 
+on human nucleus pulposus cells: new insights into the bi­
+ological cross-talk between muscle and intervertebral disk. 
+Spine (Phila Pa 1976) 2023;48:468-75.
+78.	Chen X, Li Z, Zheng C, et al. Expression of MMP1, MMP3, 
+and TIMP1 in intervertebral discs under simulated over­
+load and microgravity conditions. J Orthop Surg Res 2025;
+20:71.
+79.	Meng Z, Tan J, Ouyang X, et al. The relationship between 
+biomechanical factors and intervertebral disc degeneration: 
+a review. Am J Transl Res 2025;17:3575-85.
+80.	Yang Y, Li H, Zuo J, et al. Mechanistic interactions driving 
+nucleus pulposus cell senescence in intervertebral disc de­
+generation: a multi-axial perspective of mechanical, im­
+mune, and metabolic pathways. JOR Spine 2025;8:e70089.
+81.	Ling Z, Zeng X, Luo Q, et al. Co-morbid mechanisms of 
+intervertebral disc degeneration and osteoporosis: biome­
+chanical coupling and molecular pathways synergistically 
+driving degenerative lesions. J Orthop Surg Res 2025;20:
+652.
+82.	Zhang C, Li CM, Jiang Q. Role of oxidative stress in inter­
+vertebral disc degeneration: mechanisms, pathogenesis, 
+and therapeutic strategies. Mol Biol Rep 2025;52:444.
+83.	Cai W, Yang F, Yang C, et al. Multiscale mechanical-adapt­
+ed hydrogels for the repair of intervertebral disc degenera­
+tion. Bioact Mater 2025;48:336-52.
+84.	Zhang J, Wang Z, Chen S, et al. From molecular regulation 
+to tissue repair: hydrogels in the fight against interverte­
+bral disc degeneration. Ann Med 2025;57:2572310.
+85.	Zhang Y, Xu J, Zhou Z, et al. Diurnal asymmetric loading 
+
+
+--- Page 16 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+174  www.e-neurospine.org
+modulates cell phenotype in intervertebral disc. JOR Spine 
+2025;8:e70068.
+86.	Sao K, Risbud MV. SDC4 drives fibrotic remodeling of the 
+intervertebral disc under altered spinal loading. Cell Death 
+Dis 2025;16:678.
+87.	Tavakoli J, Diwan AD, Tipper JL. Intervertebral disc-on-a-
+chip: a precision engineered toolbox for low back pain 
+studies. Trends Biotechnol 2023;41:1339-42.
+88.	Oh EG, Xiao L, Xu Z, et al. An ex vivo intervertebral disc 
+slice culture model for studying disc degeneration and im­
+mune cell interactions. Cells 2025;14:1230.
+89.	Lazaro-Pacheco D, Ebisch I, Cooper-White J, et al. Six-axis, 
+physiological activity profiles create a more challenging 
+cellular environment in the intervertebral disc compared to 
+single-axis loading. ACS Biomater Sci Eng 2025;11:3031-42.
+90.	Vadalà G, Russo F, Ambrosio L, et al. Stem cells sources for 
+intervertebral disc regeneration. World J Stem Cells 2016;
+8:185-201.
+91.	Vadalà G, Ambrosio L, Russo F, et al. Stem cells and inter­
+vertebral disc regeneration overview-what they can and 
+can’t do. Int J Spine Surg 2021;15:40-53.
+92.	Vadalà G, Russo F, Lavazza C, et al. Intradiscal mesenchy­
+mal stromal cell therapy for the treatment of low back pain 
+due to moderate-to-advanced multilevel disc degeneration: 
+a preliminary report of a double-blind, phase IIB random­
+ized clinical trial (DREAM Study). JOR Spine 2025;8:
+e70086.
+93.	Wang Z, Wu A, Wang S, et al. Enhancing barricade design 
+in cemented paste backfill: rheology, slab theory, and strength 
+fusion. Phys 2025;37:053101.
+94.	Sun T, Wang J, Liu X, et al. Finite element models of inter­
+vertebral disc: recent advances and prospects. Ann Med 
+2025;57:2453089.
+95.	Walter BA, Illien-Jünger S, Nasser PR, et al. Development 
+and validation of a bioreactor system for dynamic loading 
+and mechanical characterization of whole human interver­
+tebral discs in organ culture. J Biomech 2014;47:2095-101.
+96.	Walsh AJ, Lotz JC. Biological response of the intervertebral 
+disc to dynamic loading. J Biomech 2004;37:329-37.
+97.	Chou PH, Wang ST, Yen MH, et al. Fluid-induced, shear 
+stress-regulated extracellular matrix and matrix metallo­
+proteinase genes expression on human annulus fibrosus 
+cells. Stem Cell Res Ther 2016;7:34.
+98.	Chan SC, Walser J, Käppeli P, et al. Region specific response 
+of intervertebral disc cells to complex dynamic loading: an 
+organ culture study using a dynamic torsion-compression 
+bioreactor. PLoS One 2013;8:e72489.
+99.	Sowa G, Coelho P, Vo N, et al. Determination of annulus 
+fibrosus cell response to tensile strain as a function of du­
+ration, magnitude, and frequency. J Orthop Res 2011;29:
+1275-83.
+100.	Wang H, Zhang W, Cai Y, et al. Moderate mechanical 
+stimulation antagonizes inflammation of annulus fibrosus 
+cells through YAP-mediated suppression of NF-κB signal­
+ing. J Orthop Res 2023;41:2667-84.
+101.	Walter BA, Korecki CL, Purmessur D, et al. Complex load­
+ing affects intervertebral disc mechanics and biology. Os­
+teoarthritis Cartilage 2011;19:1011-8.
+102.	Vergroesen PP, Kingma I, Emanuel KS, et al. Mechanics 
+and biology in intervertebral disc degeneration: a vicious 
+circle. Osteoarthritis Cartilage 2015;23:1057-70.
+103.	Zhang GZ, Liu MQ, Chen HW, et al. NF-κB signalling 
+pathways in nucleus pulposus cell function and interverte­
+bral disc degeneration. Cell Prolif 2021;54:e13057.
+104.	Wuertz K, Haglund L. Inflammatory mediators in inter­
+vertebral disk degeneration and discogenic pain. Global 
+Spine J 2013;3:175-84.
+105.	Chu G, Shi C, Wang H, et al. Strategies for annulus fibro­
+sus regeneration: from biological therapies to tissue engi­
+neering. Front Bioeng Biotechnol 2018;6:90.
+106.	Ząbek Z, Wyczałkowska-Tomasik A, Poboży K, et al. Un­
+derstanding the microenvironment of intervertebral disc 
+degeneration: a comprehensive review of pathophysiologi­
+cal insights and therapeutic implications. Int J Mol Sci 
+2025;26:9938.
+107.	Lyu FJ, Cui H, Pan H, et al. Painful intervertebral disc de­
+generation and inflammation: from laboratory evidence to 
+clinical interventions. Bone Res 2021;9:7.
+108.	Liu H, Hu J, Zheng Q, et al. Piezo1 channels as force sen­
+sors in mechanical force-related chronic inflammation. 
+Front Immunol 2022;13:816149.
+109.	Stannard JT, Edamura K, Stoker AM, et al. Development 
+of a whole organ culture model for intervertebral disc dis­
+ease. J Orthop Translat 2016;5:1-8.
+110.	Zhou Z, Cui S, Du J, et al. One strike loading organ culture 
+model to investigate the post-traumatic disc degenerative 
+condition. J Orthop Translat 2021;26:141-50.
+111.	Pfannkuche JJ, Guo W, Cui S, et al. Intervertebral disc or­
+gan culture for the investigation of disc pathology and re­
+generation - benefits, limitations, and future directions of 
+bioreactors. Connect Tissue Res 2020;61:304-21.
+112.	Gantenbein B, Illien-Jünger S, Chan SC, et al. Organ cul­
+
+
+--- Page 17 ---
+
+The Biomechanical Landscape of Lumbar Disc Herniation
+Vadala G, et al.
+https://doi.org/10.14245/ns.2551668.834
+
+www.e-neurospine.org   175
+ture bioreactors--platforms to study human intervertebral 
+disc degeneration and regenerative therapy. Curr Stem Cell 
+Res Ther 2015;10:339-52.
+113.	Tang SN, Bonilla AF, Chahine NO, et al. Controversies in 
+spine research: organ culture versus in vivo models for stud­
+ies of the intervertebral disc. JOR Spine 2022;5:e1235.
+114.	Naqvi SM, Gansau J, Gibbons D, et al. In vitro co-culture 
+and ex vivo organ culture assessment of primed and cryo­
+preserved stromal cell microcapsules for intervertebral 
+disc regeneration. Eur Cell Mater 2019;37:134-52.
+115.	May RD, Frauchiger DA, Albers CE, et al. Inhibitory ef­
+fects of human primary intervertebral disc cells on human 
+primary osteoblasts in a co-culture system. Int J Mol Sci 
+2018;19:1195.
+116.	Hwang MH, Cho DH, Baek SM, et al. Spine-on-a-chip: 
+human annulus fibrosus degeneration model for simulat­
+ing the severity of intervertebral disc degeneration. Biomi­
+crofluidics 2017;11:064107.
+117.	Dai J, Xing Y, Xiao L, et al. Microfluidic disc-on-a-chip de­
+vice for mouse intervertebral disc-pitching a next-genera­
+tion research platform to study disc degeneration. ACS 
+Biomater Sci Eng 2019;5:2041-51.
+118.	Mainardi A, Cambria E, Occhetta P, et al. Intervertebral 
+disc-on-a-chip as advanced in vitro model for mechanobi­
+ology research and drug testing: a review and perspective. 
+Front Bioeng Biotechnol 2021;9:826867.
+119.	Volz M, Elmasry S, Jackson AR, et al. Computational 
+modeling intervertebral disc pathophysiology: a review. 
+Front Physiol 2021;12:750668.
+120.	Galbusera F, Niemeyer F, Wilke HJ, et al. Fully automated 
+radiological analysis of spinal disorders and deformities: a 
+deep learning approach. Eur Spine J 2019;28:951-60.
+121.	Giaccone P, D’Antoni F, Russo F, et al. Prevention and man­
+agement of degenerative lumbar spine disorders through 
+artificial intelligence-based decision support systems: a sys­
+tematic review. BMC Musculoskelet Disord 2025;26:126.
+122.	Ambrosio L, Petrucci G, Russo F, et al. Why clinical trials 
+in disc regeneration strive to achieve completion: insights 
+from publication status and funding sources. JOR Spine 
+2024;7:e1329.
+123.	Li ZP, Li H, Ruan YH, et al. Stem cell therapy for interver­
+tebral disc degeneration: Clinical progress with exosomes 
+and gene vectors. World J Stem Cells 2025;17:102945.
+124.	Mizuno S, Vadala G, Kang JD. Biological therapeutic mo­
+dalities for intervertebral disc diseases: an Orthoregenera­
+tion Network (ON) Foundation review. Arthroscopy 2024;
+40:1019-30.
+125.	Tilotta V, Vadalà G, Di Giacomo G, et al. Wharton’s jelly 
+mesenchymal stromal cell-derived extracellular vesicles at­
+tenuate intervertebral disc degeneration under inflamma­
+tory stress in an in vitro 3D culture system. JOR Spine 2025;
+8:e70106.
