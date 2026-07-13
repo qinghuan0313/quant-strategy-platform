@@ -437,6 +437,14 @@ def page_compare():
 
 # ====================== 主入口 ======================
 def main():
+    st.markdown("""
+    <style>
+    [data-testid="stDataFrame"] td, [data-testid="stDataFrame"] th {
+        text-align: center !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     if 'page' not in st.session_state:
         st.session_state['page'] = 0
 
