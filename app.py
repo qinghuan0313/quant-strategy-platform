@@ -79,6 +79,14 @@ STOCKS = load_stock_list()
 STOCK_OPTIONS = [get_stock_label(c, n) for c, n in STOCKS.items()]
 DEFAULT_CODE = "600900"  # 长江电力，预加载的展示标的
 
+
+def centered_dataframe(df, **kwargs):
+    """居中显示表格"""
+    return centered_dataframe(
+        df.style.set_properties(**{'text-align': 'center'}),
+        **kwargs
+    )
+
 # ====================== 风险测评 ======================
 RISK_QUESTIONS = [
     ("您的年龄", ["60岁以上", "45-60岁", "30-45岁", "18-30岁"]),
@@ -304,21 +312,21 @@ def page_recommend():
                 with c1:
                     st.success(f"🟢 {lab_hi}（≥{hi}）")
                     if len(good) > 0:
-                        st.dataframe(good, hide_index=True, width='stretch')
+                        centered_dataframe(good, hide_index=True, width='stretch')
                         st.caption(f"{len(good)} 只")
                     else:
                         st.caption("暂无")
                 with c2:
                     st.info(f"🟡 {lab_mid}（{mid}-{hi-1}）")
                     if len(normal) > 0:
-                        st.dataframe(normal, hide_index=True, width='stretch')
+                        centered_dataframe(normal, hide_index=True, width='stretch')
                         st.caption(f"{len(normal)} 只")
                     else:
                         st.caption("暂无")
                 with c3:
                     st.error(f"🔴 {lab_lo}（<{mid}）")
                     if len(bad) > 0:
-                        st.dataframe(bad, hide_index=True, width='stretch')
+                        centered_dataframe(bad, hide_index=True, width='stretch')
                         st.caption(f"{len(bad)} 只")
                     else:
                         st.caption("暂无")
@@ -406,7 +414,7 @@ def page_compare():
                     "胜率": f"{r['win_rate']:.1f}%",
                     "交易次数": r['trade_count'],
                 })
-            st.dataframe(pd.DataFrame(rows), width='stretch', hide_index=True)
+            centered_dataframe(pd.DataFrame(rows), width='stretch', hide_index=True)
 
             st.divider()
             st.subheader("📈 净值曲线对比")
@@ -437,14 +445,6 @@ def page_compare():
 
 # ====================== 主入口 ======================
 def main():
-    st.markdown("""
-    <style>
-    [data-testid="stDataFrame"] td, [data-testid="stDataFrame"] th {
-        text-align: center !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
     if 'page' not in st.session_state:
         st.session_state['page'] = 0
 
