@@ -196,7 +196,7 @@ def page_home():
     with col1:
         with st.container(border=True):
             st.markdown("#### 📋 第一步：风险测评")
-            st.caption("8道选择题，1分钟完成。判断您的风险承受能力，确保策略推荐不是盲目的。")
+            st.caption("10道专业测评题，2分钟完成。判断您的风险承受能力，确保策略推荐不是盲目的。")
     with col2:
         with st.container(border=True):
             st.markdown("#### 🤖 第二步：AI推荐")
@@ -226,7 +226,7 @@ def page_home():
 # ====================== 页面2：风险测评 ======================
 def page_assessment():
     st.title("📋 风险承受能力测评")
-    st.caption("8道选择题，做完自动出结果。参考了证监会《证券期货投资者适当性管理办法》")
+    st.caption("10道选择题，做完自动出结果。参考了证监会《证券期货投资者适当性管理办法》")
 
     scores = []
     for i, (q, options) in enumerate(RISK_QUESTIONS):
@@ -237,7 +237,7 @@ def page_assessment():
 
     st.divider()
 
-    if len(scores) == 8:
+    if len(scores) == 10:
         total = sum(scores)
         level, emoji = get_risk_level(total)
         with st.container(border=True):
@@ -251,7 +251,7 @@ def page_assessment():
         if st.button("🎯 查看AI策略推荐", type="primary", width='stretch'):
             go_to_page(2)
     else:
-        st.info(f"已完成 {len(scores)}/8 题，请继续...")
+        st.info(f"已完成 {len(scores)}/10 题，请继续...")
 
 
 # ====================== 页面3：AI策略推荐 ======================
