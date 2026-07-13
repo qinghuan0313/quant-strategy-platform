@@ -81,13 +81,7 @@ DEFAULT_CODE = "600900"  # 长江电力，预加载的展示标的
 
 
 def centered_dataframe(df, **kwargs):
-    """居中显示表格"""
-    if df is None or len(df) == 0:
-        return
-    cfg = {}
-    for col in df.columns:
-        cfg[col] = st.column_config.TextColumn(alignment="center")
-    return st.dataframe(df, column_config=cfg, **kwargs)
+    return st.dataframe(df, **kwargs)
 
 # ====================== 风险测评 ======================
 RISK_QUESTIONS = [
