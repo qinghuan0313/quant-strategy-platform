@@ -60,6 +60,8 @@ def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_
 推荐组合：{chosen_strategies}
 请写推荐理由。"""
 
+    return llm_chat(system, user)
+
 
 def risk_warning(strategy_name, annual_ret, max_dd, win_rate, worst_year, worst_year_ret):
     """LLM风险提示"""
