@@ -42,7 +42,7 @@ def llm_chat(system_prompt, user_prompt):
 
 def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary, risk_score=None):
     """LLM策略推荐 —— 真正个性化"""
-    score_info = f"，测评得分{risk_score}/32分" if risk_score else ""
+    score_info = f"，测评得分{risk_score}/40分" if risk_score else ""
     system = f"""你是量化投资顾问。系统已为用户选定了策略组合「{chosen_strategies}」。
 请为这个用户写推荐理由。必须是针对这个具体用户的，不能是套话。
 
