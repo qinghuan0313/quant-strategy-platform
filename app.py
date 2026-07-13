@@ -26,7 +26,7 @@ def go_to_page(idx):
 
 
 # ====================== 数据 ======================
-@st.cache_data
+@st.cache_data(ttl=600)
 def load_stock_list():
     path = "data/stock_list.csv"
     if os.path.exists(path):
@@ -37,7 +37,7 @@ def load_stock_list():
             "600036": "招商银行", "000858": "五粮液"}
 
 
-@st.cache_data
+@st.cache_data(ttl=600)
 def load_data(code):
     code = str(code).zfill(6)
     path = f"data/prices/{code}.csv"
@@ -50,7 +50,7 @@ def get_stock_label(code, name):
     return f"{name} ({code})"
 
 
-@st.cache_data
+@st.cache_data(ttl=600)
 def load_latest_signals():
     path = "data/latest_signals.csv"
     if os.path.exists(path):
@@ -60,7 +60,7 @@ def load_latest_signals():
     return pd.DataFrame()
 
 
-@st.cache_data
+@st.cache_data(ttl=3600)
 def get_backtest_result(code):
     data = load_data(code)
     if data is None or len(data) < 200:
