@@ -80,6 +80,19 @@ STOCK_OPTIONS = [get_stock_label(c, n) for c, n in STOCKS.items()]
 DEFAULT_CODE = "600900"  # 长江电力，预加载的展示标的
 
 
+@st.cache_data(ttl=600)
+def get_latest_prices():
+    """返回每只股票的最新收盘价"""
+    prices = {}
+    for code in STOCKS:
+        path = f"data/prices/{str(code).zfill(6)}.csv"
+        if os.path.exists(path):
+            df = pd.read_csv(path)
+            if len(df) > 0:
+                prices[str(code).zfill(6)] = df['close'].iloc[-1]
+    return prices
+
+
 def show_table(df, **kwargs):
     """展示表格：评分列四舍五入到1位小数"""
     df = df.copy()
@@ -350,10 +363,16 @@ def page_recommend():
         ]
         tabs = st.tabs([s[0] for s in strategy_cols])
 
+        prices = get_latest_prices()
+
         for tab, (title, col) in zip(tabs, strategy_cols):
             with tab:
-                ranked = signals_df[["name", "code", col]].sort_values(col, ascending=False)
-                ranked.columns = ["股票名称", "代码", "评分"]
+                ranked = signals_df[["name", "code", col]].copy()
+                ranked["最低买入"] = ranked["code"].apply(
+                    lambda c: f"{prices.get(str(c).zfill(6), 0) * 100 / 10000:.1f}万"
+                )
+                ranked = ranked.sort_values(col, ascending=False)
+                ranked.columns = ["股票名称", "代码", "评分", "最低买入"]
 
                 if col == "signal_A":
                     hi, mid = 60, 45
@@ -395,6 +414,7 @@ def page_recommend():
         st.warning("暂无信号数据，请先运行 data/compute_signals.py")
 
     st.divider()
+    st.caption("💡 最低买入 = 最新股价 × 100股（A股最低交易1手）。请根据自己的投资金额判断能否买入。")
     st.caption("⚠️ 历史回测不代表未来表现。请根据自身情况独立判断。")
 
 
