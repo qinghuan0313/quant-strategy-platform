@@ -80,13 +80,13 @@ STOCK_OPTIONS = [get_stock_label(c, n) for c, n in STOCKS.items()]
 DEFAULT_CODE = "600900"  # 长江电力，预加载的展示标的
 
 
-def centered_dataframe(df, **kwargs):
-    return st.dataframe(
-        df.style.set_table_styles(
-            [dict(selector='td,th', props=[('text-align', 'center')])]
-        ),
-        **kwargs
-    )
+def show_table(df, **kwargs):
+    """展示表格：评分列四舍五入到1位小数"""
+    df = df.copy()
+    for col in df.columns:
+        if "评分" in col or "signal" in col.lower():
+            df[col] = df[col].round(1)
+    return st.dataframe(df, **kwargs)
 
 # ====================== 风险测评 ======================
 RISK_QUESTIONS = [
@@ -313,21 +313,21 @@ def page_recommend():
                 with c1:
                     st.success(f"🟢 {lab_hi}（≥{hi}）")
                     if len(good) > 0:
-                        centered_dataframe(good, hide_index=True, width='stretch')
+                        show_table(good, hide_index=True, width='stretch')
                         st.caption(f"{len(good)} 只")
                     else:
                         st.caption("暂无")
                 with c2:
                     st.info(f"🟡 {lab_mid}（{mid}-{hi-1}）")
                     if len(normal) > 0:
-                        centered_dataframe(normal, hide_index=True, width='stretch')
+                        show_table(normal, hide_index=True, width='stretch')
                         st.caption(f"{len(normal)} 只")
                     else:
                         st.caption("暂无")
                 with c3:
                     st.error(f"🔴 {lab_lo}（<{mid}）")
                     if len(bad) > 0:
-                        centered_dataframe(bad, hide_index=True, width='stretch')
+                        show_table(bad, hide_index=True, width='stretch')
                         st.caption(f"{len(bad)} 只")
                     else:
                         st.caption("暂无")
@@ -415,7 +415,7 @@ def page_compare():
                     "胜率": f"{r['win_rate']:.1f}%",
                     "交易次数": r['trade_count'],
                 })
-            centered_dataframe(pd.DataFrame(rows), width='stretch', hide_index=True)
+            show_table(pd.DataFrame(rows), width='stretch', hide_index=True)
 
             st.divider()
             st.subheader("📈 净值曲线对比")
