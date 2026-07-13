@@ -40,23 +40,25 @@ def llm_chat(system_prompt, user_prompt):
         return None
 
 
-def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary):
-    """LLM策略推荐 —— 只写解释文案，不做决策"""
-    system = """你是量化投资顾问。系统已为用户选定了策略组合，你的任务是为这个组合写一段通俗的推荐理由。
+def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary, risk_score=None):
+    """LLM策略推荐 —— 真正个性化"""
+    score_info = f"，测评得分{risk_score}/32分" if risk_score else ""
+    system = f"""你是量化投资顾问。系统已为用户选定了策略组合「{chosen_strategies}」。
+请为这个用户写推荐理由。必须是针对这个具体用户的，不能是套话。
+
 要求：
-1. 必须推荐以下策略：""" + chosen_strategies + """
-2. 用通俗语言解释为什么这个组合适合用户，不给"MA5上穿MA20"这类术语
-3. 引用回测数据中的真实数字
-4. 用绝对金额说风险——"10万最多亏1.3万"而不是"-13%"
-5. 禁止"保证收益""稳赚不赔""建议买入"
-6. 150字以内"""
+1. 根据用户{risk_level}{score_info}的特点，解释为什么这个策略组合合适
+   - 保守型重点说"回撤小、睡得安稳"
+   - 进取型重点说"能承受波动、博取高收益"
+2. 根据投资期限{horizon}给建议——短期(<6个月)提醒频繁调仓风险，长期(>1年)可以忽略短期波动
+3. 引用回测真实数字，用绝对金额说风险
+4. 禁止术语、禁止收益承诺
+5. 150字以内，像真人在聊天"""
 
     user = f"""用户：{risk_level}，投入{amount:,}元，期限{horizon}
-各策略历史回测数据：
-{backtest_summary}
-请为推荐组合「{chosen_strategies}」写一段推荐理由。"""
-
-    return llm_chat(system, user)
+回测数据：{backtest_summary}
+推荐组合：{chosen_strategies}
+请写推荐理由。"""
 
 
 def risk_warning(strategy_name, annual_ret, max_dd, win_rate, worst_year, worst_year_ret):
@@ -73,10 +75,18 @@ def risk_warning(strategy_name, annual_ret, max_dd, win_rate, worst_year, worst_
     return llm_chat(system, user)
 
 
-def compare_analysis(stock_name, results):
-    """LLM策略对比分析"""
-    system = """你是量化策略分析师。对比不同策略的表现，给出一段分析。
-要求：有洞察，不只是"X最高Y最低"，要解释为什么。100字以内。"""
+def compare_analysis(stock_name, results, risk_level=None):
+    """LLM策略对比分析 —— 结合用户风险等级"""
+    risk_hint = f"用户是{risk_level}，请在分析时特别关注回撤数据。" if risk_level else ""
+    system = f"""你是量化策略分析师。请对比三个策略在同一只股票上的表现，给出一段分析。
+{risk_hint}
+要求：
+1. 不只是"A收益最高B回撤最小"，要解释原因
+   - 如果趋势策略最好→说明该股票趋势性强
+   - 如果均值回复最好→说明该股票波动大、经常超跌反弹
+   - 如果多因子最好→说明该股票适合基本面驱动
+2. 结合用户风险等级给出针对性建议
+3. 100字以内，有洞察力"""
 
     summary = "\n".join([
         f"{n}：年化{r['annual_return']:+.2f}%，回撤{r['max_drawdown']:.2f}%，夏普{r['sharpe_ratio']:.3f}"

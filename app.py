@@ -221,7 +221,8 @@ def page_recommend():
                 for n, r in demo_r.items()
             ])
             llm_reason = recommend_strategy(level, amount, horizon,
-                ' + '.join(strategies), summary)
+                ' + '.join(strategies), summary,
+                st.session_state.get('risk_score'))
         else:
             llm_reason = None
 
@@ -415,7 +416,8 @@ def page_compare():
                 chart_data[name] = eq
             st.line_chart(chart_data, width='stretch')
 
-            llm_analysis = compare_analysis(stock, results)
+            llm_analysis = compare_analysis(stock, results,
+                st.session_state.get('risk_level'))
             if llm_analysis:
                 st.info(f"🤖 {llm_analysis}")
             else:
