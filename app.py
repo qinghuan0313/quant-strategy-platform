@@ -220,7 +220,8 @@ def page_recommend():
                 f"{n}：年化{r['annual_return']:+.2f}%，最大回撤{r['max_drawdown']:.2f}%"
                 for n, r in demo_r.items()
             ])
-            llm_reason = recommend_strategy(level, amount, horizon, summary)
+            llm_reason = recommend_strategy(level, amount, horizon,
+                ' + '.join(strategies), summary)
         else:
             llm_reason = None
 

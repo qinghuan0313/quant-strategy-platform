@@ -40,20 +40,21 @@ def llm_chat(system_prompt, user_prompt):
         return None
 
 
-def recommend_strategy(risk_level, amount, horizon, backtest_summary):
-    """LLM策略推荐"""
-    system = """你是量化投资顾问。根据用户画像和回测数据推荐策略。
+def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary):
+    """LLM策略推荐 —— 只写解释文案，不做决策"""
+    system = """你是量化投资顾问。系统已为用户选定了策略组合，你的任务是为这个组合写一段通俗的推荐理由。
 要求：
-1. 用通俗语言，不给"MA5上穿MA20"这种术语
-2. 引用真实的回测数字
-3. 用绝对金额说风险——"10万最多亏1.3万"而不是"-13%"
-4. 禁止"保证收益""稳赚不赔""建议买入"
-5. 150字以内"""
+1. 必须推荐以下策略：""" + chosen_strategies + """
+2. 用通俗语言解释为什么这个组合适合用户，不给"MA5上穿MA20"这类术语
+3. 引用回测数据中的真实数字
+4. 用绝对金额说风险——"10万最多亏1.3万"而不是"-13%"
+5. 禁止"保证收益""稳赚不赔""建议买入"
+6. 150字以内"""
 
     user = f"""用户：{risk_level}，投入{amount:,}元，期限{horizon}
 各策略历史回测数据：
 {backtest_summary}
-请推荐最合适的策略组合。"""
+请为推荐组合「{chosen_strategies}」写一段推荐理由。"""
 
     return llm_chat(system, user)
 
