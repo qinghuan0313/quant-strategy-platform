@@ -267,7 +267,7 @@ def page_recommend():
 
     # ---- 今日信号（在回测后面） ----
     st.subheader("📡 今日策略信号")
-    st.caption("三个策略对20只股票的最新评分排名。分段展示：推荐 / 观望 / 回避")
+    st.caption("三个策略对40只股票的最新评分排名。分段展示：推荐 / 观望 / 回避")
 
     signals_df = load_latest_signals()
     if not signals_df.empty:
@@ -352,9 +352,20 @@ def page_detail():
                         st.line_chart(equity.set_index('date')['equity'], width='stretch')
 
                     max_loss = int(100000 * abs(r['max_drawdown']) / 100)
+                    # 计算实际最差年份
+                    eq = r['equity_curve'].copy()
+                    eq['year'] = eq['date'].dt.year
+                    yearly = eq.groupby('year').apply(
+                        lambda g: (g['equity'].iloc[-1] / g['equity'].iloc[0] - 1) * 100
+                    )
+                    if len(yearly) > 0:
+                        worst_year = yearly.idxmin()
+                        worst_ret = yearly.min()
+                    else:
+                        worst_year, worst_ret = "2022", -12.1
                     llm_warn = risk_warning(
                         name, r['annual_return'], r['max_drawdown'],
-                        r['win_rate'], "2022", -12.1
+                        r['win_rate'], str(worst_year), worst_ret
                     )
                     if llm_warn:
                         st.warning(f"⚠️ {llm_warn}")
