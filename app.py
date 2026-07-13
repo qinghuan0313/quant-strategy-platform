@@ -187,6 +187,7 @@ def page_assessment():
 
 # ====================== 页面3：AI策略推荐 ======================
 def page_recommend():
+    st.markdown("<script>window.scrollTo(0,0);</script>", unsafe_allow_html=True)
     st.title("🎯 AI策略推荐")
 
     if 'risk_level' not in st.session_state:
@@ -328,6 +329,7 @@ def page_recommend():
 
 # ====================== 页面4：策略详情 ======================
 def page_detail():
+    st.markdown("<script>window.scrollTo(0,0);</script>", unsafe_allow_html=True)
     st.title("📈 策略详情")
 
     stock = st.selectbox("选择股票", STOCK_OPTIONS, key="detail_stock")
@@ -381,6 +383,7 @@ def page_detail():
 
 # ====================== 页面5：策略对比 ======================
 def page_compare():
+    st.markdown("<script>window.scrollTo(0,0);</script>", unsafe_allow_html=True)
     st.title("📊 策略对比")
 
     stock = st.selectbox("选择股票", STOCK_OPTIONS, key="compare_stock")
