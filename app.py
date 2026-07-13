@@ -14,6 +14,7 @@ from strategies.strategy_a import strategy_multi_factor
 from strategies.strategy_b import strategy_trend_momentum
 from strategies.strategy_c import strategy_mean_reversion
 from engine.backtest import run_backtest
+from llm_helper import recommend_strategy, risk_warning, compare_analysis
 
 st.set_page_config(page_title="AI量化策略平台", page_icon="📊", layout="wide")
 
@@ -207,10 +208,28 @@ def page_recommend():
     st.divider()
 
     # ---- AI推荐 ----
-    strategies, reason = get_recommendation(level)
+    strategies, fallback_reason = get_recommendation(level)
     st.subheader(f"推荐策略：{' + '.join(strategies)}")
-    with st.container(border=True):
-        st.markdown(f"💡 {reason}")
+
+    # LLM生成推荐理由
+    with st.spinner("AI正在分析您的画像..."):
+        demo_r = get_backtest_result(DEFAULT_CODE)
+        if demo_r is not None:
+            summary = "\n".join([
+                f"{n}：年化{r['annual_return']:+.2f}%，最大回撤{r['max_drawdown']:.2f}%"
+                for n, r in demo_r.items()
+            ])
+            llm_reason = recommend_strategy(level, amount, horizon, summary)
+        else:
+            llm_reason = None
+
+    if llm_reason:
+        with st.container(border=True):
+            st.markdown(f"🤖 {llm_reason}")
+            st.caption("以上推荐由AI生成")
+    else:
+        with st.container(border=True):
+            st.markdown(f"💡 {fallback_reason}")
 
     st.divider()
 
@@ -333,11 +352,18 @@ def page_detail():
                         st.line_chart(equity.set_index('date')['equity'], width='stretch')
 
                     max_loss = int(100000 * abs(r['max_drawdown']) / 100)
-                    st.warning(
-                        f"⚠️ 历史最大回撤 {r['max_drawdown']:.2f}%，"
-                        f"即10万元最大亏损约 **{max_loss:,}元**。"
-                        f"历史回测不代表未来表现。"
+                    llm_warn = risk_warning(
+                        name, r['annual_return'], r['max_drawdown'],
+                        r['win_rate'], "2022", -12.1
                     )
+                    if llm_warn:
+                        st.warning(f"⚠️ {llm_warn}")
+                    else:
+                        st.warning(
+                            f"⚠️ 历史最大回撤 {r['max_drawdown']:.2f}%，"
+                            f"即10万元最大亏损约 **{max_loss:,}元**。"
+                            f"历史回测不代表未来表现。"
+                        )
         else:
             st.warning("暂无该股票数据，请先运行数据采集脚本")
 
@@ -374,17 +400,20 @@ def page_compare():
                 chart_data[name] = eq
             st.line_chart(chart_data, width='stretch')
 
-            vals = [(n, r['annual_return'], r['max_drawdown']) for n, r in results.items()]
-            best_return = max(vals, key=lambda x: x[1])
-            best_dd = min(vals, key=lambda x: abs(x[2]))
-
-            st.info(
-                f"📊 **快速分析**：在{stock}上，"
-                f"**{best_return[0]}**收益最高（{best_return[1]:+.2f}%），"
-                f"**{best_dd[0]}**回撤控制最好（{best_dd[2]:.2f}%）。"
-                f"同一只股票、同一段时间，不同策略表现完全不同——"
-                f"这正是为什么需要先做风险测评，再选策略。"
-            )
+            llm_analysis = compare_analysis(stock, results)
+            if llm_analysis:
+                st.info(f"🤖 {llm_analysis}")
+            else:
+                vals = [(n, r['annual_return'], r['max_drawdown']) for n, r in results.items()]
+                best_return = max(vals, key=lambda x: x[1])
+                best_dd = min(vals, key=lambda x: abs(x[2]))
+                st.info(
+                    f"📊 **快速分析**：在{stock}上，"
+                    f"**{best_return[0]}**收益最高（{best_return[1]:+.2f}%），"
+                    f"**{best_dd[0]}**回撤控制最好（{best_dd[2]:.2f}%）。"
+                    f"同一只股票、同一段时间，不同策略表现完全不同——"
+                    f"这正是为什么需要先做风险测评，再选策略。"
+                )
         else:
             st.warning("暂无该股票数据")
 
