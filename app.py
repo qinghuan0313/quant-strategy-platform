@@ -334,9 +334,8 @@ def page_recommend():
                     st.markdown(f"**{name}**")
                     amt_loss = int(100000 * abs(r['max_drawdown']) / 100)
                     st.metric("年化收益", f"{r['annual_return']:+.2f}%")
-                    st.metric("最大回撤", f"{r['max_drawdown']:.2f}%",
-                              delta=f"10万最多亏{amt_loss:,}元", delta_color="off")
-                    st.caption(f"夏普: {r['sharpe_ratio']:.3f} | 胜率: {r['win_rate']:.1f}%")
+                    st.metric("最大回撤", f"{r['max_drawdown']:.2f}%")
+                    st.caption(f"10万最多亏{amt_loss:,}元 | 夏普: {r['sharpe_ratio']:.3f} | 胜率: {r['win_rate']:.1f}%")
         st.caption("")
 
         col_a, col_b = st.columns(2)
@@ -352,7 +351,7 @@ def page_recommend():
 
     # ---- 今日信号（在回测后面） ----
     st.subheader("📡 今日策略信号")
-    st.caption("三个策略对40只股票的最新评分排名。分段展示：推荐 / 观望 / 回避")
+    st.caption("策略A/B/C对40只股票的最新评分排名。策略D（LLM新闻情绪）需实时新闻数据，暂独立运行")
 
     signals_df = load_latest_signals()
     if not signals_df.empty:
@@ -375,8 +374,26 @@ def page_recommend():
                 ranked.columns = ["股票名称", "代码", "评分", "最低买入"]
 
                 if col == "signal_A":
-                    hi, mid = 60, 45
-                    lab_hi, lab_mid, lab_lo = "优秀推荐", "中等观望", "暂不推荐"
+                    # 策略A是排名制，取Top5/Bottom5而非绝对值阈值
+                    ranked_for_a = ranked.sort_values("评分", ascending=False)
+                    top5 = ranked_for_a.head(5)
+                    mid_range = ranked_for_a.iloc[5:15] if len(ranked_for_a) > 15 else ranked_for_a.iloc[5:]
+                    bottom5 = ranked_for_a.tail(5)
+
+                    c1, c2, c3 = st.columns(3)
+                    with c1:
+                        st.success("🟢 综合评分 Top 5")
+                        if len(top5) > 0:
+                            show_table(top5, hide_index=True, width='stretch')
+                    with c2:
+                        st.info("🟡 中等（第6-15名）")
+                        if len(mid_range) > 0:
+                            show_table(mid_range, hide_index=True, width='stretch')
+                    with c3:
+                        st.error("🔴 排名靠后（Bottom 5）")
+                        if len(bottom5) > 0:
+                            show_table(bottom5, hide_index=True, width='stretch')
+                    continue
                 elif col == "signal_C":
                     hi, mid = 55, 35
                     lab_hi, lab_mid, lab_lo = "超卖反弹信号", "一般（未到超卖区）", "回避"
