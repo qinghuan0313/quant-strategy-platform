@@ -40,10 +40,11 @@ def llm_chat(system_prompt, user_prompt):
         return None
 
 
-def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary, top_stocks="", risk_score=None):
-    """LLM策略推荐 —— 亲切顾问风格"""
+def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary, top_stocks="", risk_score=None, risk_answers=None):
+    """LLM策略推荐 —— 基于具体答题记录"""
     score_info = f"（40分制得了{risk_score}分）" if risk_score else ""
     stock_hint = f"""\n当前信号最强的几只：{top_stocks}。""" if top_stocks else ""
+    answers_hint = f"""\n他在测评中的具体回答：{'; '.join(risk_answers)}。请务必引用其中1-2个具体回答来做针对性分析。""" if risk_answers else ""
 
     system = f"""你是一个亲切的量化投资顾问，用户叫你"小策"。你现在要跟用户聊聊他的测评结果和策略推荐。
 
@@ -53,10 +54,10 @@ def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_
 
 你要做的事：
 1. 先做个性化分析（约200字），包含以下几点：
-   - 解读他的测评结果：{risk_level}意味着什么，{score_info}在同等级中处于什么位置，投资期限{horizon}对他决策的影响
-   - 解释为什么推荐这个组合：结合回测数据说明每个策略的特点——哪个负责防守控制回撤，哪个负责进攻博收益。如果推荐了两个策略，说说它们怎么互补
-   - 针对他的情况给出一个核心建议：比如期限短就别追高波动策略，得分偏低就在同级中更保守一些
-   - 引一个最有力的回测数字来支撑你的判断（比如"历史上最差的情况是xxx，对应你的资金就是xxx元"）
+   - 一定要引用用户的具体答题内容。比如他说"亏损过15%-30%"说明他有实际亏损经历，说"三个月跌28%会加仓"说明他面对回撤偏理性——这些答题记录是你做判断的依据，不是泛泛而谈
+   - 解读他的风险画像：他的财务状况、投资经验和风险态度三个维度分别透露了什么信息，三个维度是否一致（比如投资经验多但风险态度保守？）
+   - 解释为什么推荐这个组合：结合回测数据说明每个策略的特点——哪个负责防守控制回撤，哪个负责进攻博收益
+   - 给一个针对他的核心建议，要具体到他的情况
 
 2. 然后给仓位建议，按风险等级调整：
    - 保守型：分散4-5只，单只不超过20%，留2-3成现金
@@ -65,11 +66,11 @@ def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_
    - 进取型：集中1-2只，单只可达50%，满仓操作
    用换行分条列出来。A股1手=100股，注意最低买入金额。
 
-整体约300字。说话像朋友聊天，不要写论文格式，但要有理有据让人信服。禁止用"MA5""ADX""夏普比率"等技术术语，说人话。禁止收益承诺。"""
+整体约350字。说话像朋友聊天，像在帮他分析问题，不要写论文格式。禁止用"MA5""ADX""夏普比率"等术语。禁止收益承诺。"""
 
     user = f"""用户：{risk_level}，投入{amount:,}元，期限{horizon}
 回测数据：{backtest_summary}
-推荐组合：{chosen_strategies}{stock_hint}
+推荐组合：{chosen_strategies}{stock_hint}{answers_hint}
 来吧小策，给用户说说。"""
 
     return llm_chat(system, user)

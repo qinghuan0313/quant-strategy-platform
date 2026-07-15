@@ -268,6 +268,12 @@ def page_assessment():
 
         st.session_state['risk_level'] = level
         st.session_state['risk_score'] = total
+        # 保存答题详情供LLM使用
+        st.session_state['risk_answers'] = [
+            f"{RISK_QUESTIONS[i][0][:10]}：{options[st.session_state['answers'][i]]}"
+            for i, (_, options) in enumerate(RISK_QUESTIONS)
+            if i in st.session_state.get('answers', {})
+        ]
 
         st.info("💡 接下来，系统将根据您的风险等级，匹配最适合的量化策略，并展示真实的历史回测数据供您参考。")
         col_a, col_b = st.columns(2)
@@ -340,7 +346,8 @@ def page_recommend():
                         break
             llm_reason = recommend_strategy(level, amount, horizon,
                 ' + '.join(strategies), summary, top_stocks_str,
-                st.session_state.get('risk_score'))
+                st.session_state.get('risk_score'),
+                st.session_state.get('risk_answers', []))
         else:
             llm_reason = None
 
