@@ -241,11 +241,19 @@ def page_assessment():
     st.title("📋 风险承受能力测评")
     st.caption("10道选择题，做完自动出结果。参考了证监会《证券期货投资者适当性管理办法》")
 
+    # 初始化答案存储
+    if 'answers' not in st.session_state:
+        st.session_state['answers'] = {}
+
     scores = []
     for i, (q, options) in enumerate(RISK_QUESTIONS):
         st.markdown(f"**{i+1}. {q}**")
-        ans = st.radio("", options, key=f"q{i}", index=None, label_visibility="collapsed")
+        # 恢复之前的选择
+        prev_idx = st.session_state['answers'].get(i)
+        ans = st.radio("", options, key=f"q{i}",
+                       index=prev_idx, label_visibility="collapsed")
         if ans:
+            st.session_state['answers'][i] = options.index(ans)  # 记住选项位置
             scores.append(options.index(ans) + 1)
 
     st.divider()
@@ -261,8 +269,14 @@ def page_assessment():
         st.session_state['risk_score'] = total
 
         st.info("💡 接下来，系统将根据您的风险等级，匹配最适合的量化策略，并展示真实的历史回测数据供您参考。")
-        if st.button("🎯 查看AI策略推荐", type="primary", width='stretch'):
-            go_to_page(2)
+        col_a, col_b = st.columns(2)
+        with col_a:
+            if st.button("🎯 查看AI策略推荐", type="primary", width='stretch'):
+                go_to_page(2)
+        with col_b:
+            if st.button("🔄 重新测评", width='stretch'):
+                st.session_state['answers'] = {}
+                st.rerun()
     else:
         st.info(f"已完成 {len(scores)}/10 题，请继续...")
 
