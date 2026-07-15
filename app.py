@@ -310,18 +310,12 @@ def page_recommend():
     strategies, fallback_reason = get_recommendation(level)
     st.subheader(f"推荐策略：{' + '.join(strategies)}")
 
-    # LLM生成推荐理由（每次页面加载都重新跑，确保金额变化生效）
-    llm_key = f"llm_v{amount}_{level}_{horizon}"
-    if st.session_state.get('llm_key') != llm_key:
-        st.session_state['llm_key'] = llm_key
-        st.session_state.pop('llm_result', None)
-
-    if 'llm_result' not in st.session_state:
-        with st.spinner("AI正在分析您的画像..."):
-            demo_r = get_backtest_result(DEFAULT_CODE)
-            signals_df = load_latest_signals()
-            top_stocks_str = ""
-            if demo_r is not None and not signals_df.empty:
+    # LLM生成推荐理由
+    with st.spinner("AI正在分析您的画像..."):
+        demo_r = get_backtest_result(DEFAULT_CODE)
+        signals_df = load_latest_signals()
+        top_stocks_str = ""
+        if demo_r is not None and not signals_df.empty:
             summary = "\n".join([
                 f"{n}：年化{r['annual_return']:+.2f}%，最大回撤{r['max_drawdown']:.2f}%"
                 for n, r in demo_r.items()
@@ -344,14 +338,11 @@ def page_recommend():
                             items.append(f"{row['name']}(现价{price:.0f}元，1手{min_buy:,}元，评分{row[col]:.0f})")
                         top_stocks_str = "、".join(items)
                         break
-                llm_reason = recommend_strategy(level, amount, horizon,
-                    ' + '.join(strategies), summary, top_stocks_str,
-                    st.session_state.get('risk_score'))
-                st.session_state['llm_result'] = llm_reason
-            else:
-                st.session_state['llm_result'] = None
-
-    llm_reason = st.session_state.get('llm_result')
+            llm_reason = recommend_strategy(level, amount, horizon,
+                ' + '.join(strategies), summary, top_stocks_str,
+                st.session_state.get('risk_score'))
+        else:
+            llm_reason = None
 
     if llm_reason:
         with st.container(border=True):
