@@ -241,19 +241,20 @@ def page_assessment():
     st.title("📋 风险承受能力测评")
     st.caption("10道选择题，做完自动出结果。参考了证监会《证券期货投资者适当性管理办法》")
 
-    # 初始化答案存储
+    # 初始化
     if 'answers' not in st.session_state:
         st.session_state['answers'] = {}
+    if 'reset_ver' not in st.session_state:
+        st.session_state['reset_ver'] = 0
 
     scores = []
     for i, (q, options) in enumerate(RISK_QUESTIONS):
         st.markdown(f"**{i+1}. {q}**")
-        # 恢复之前的选择
         prev_idx = st.session_state['answers'].get(i)
-        ans = st.radio("", options, key=f"q{i}",
+        ans = st.radio("", options, key=f"q{st.session_state['reset_ver']}_{i}",
                        index=prev_idx, label_visibility="collapsed")
         if ans:
-            st.session_state['answers'][i] = options.index(ans)  # 记住选项位置
+            st.session_state['answers'][i] = options.index(ans)
             scores.append(options.index(ans) + 1)
 
     st.divider()
@@ -276,9 +277,7 @@ def page_assessment():
         with col_b:
             if st.button("🔄 重新测评", width='stretch'):
                 st.session_state['answers'] = {}
-                for i in range(10):
-                    if f"q{i}" in st.session_state:
-                        del st.session_state[f"q{i}"]
+                st.session_state['reset_ver'] += 1
                 st.rerun()
     else:
         st.info(f"已完成 {len(scores)}/10 题，请继续...")
