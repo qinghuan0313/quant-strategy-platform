@@ -276,6 +276,9 @@ def page_assessment():
         with col_b:
             if st.button("🔄 重新测评", width='stretch'):
                 st.session_state['answers'] = {}
+                for i in range(10):
+                    if f"q{i}" in st.session_state:
+                        del st.session_state[f"q{i}"]
                 st.rerun()
     else:
         st.info(f"已完成 {len(scores)}/10 题，请继续...")
