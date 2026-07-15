@@ -311,13 +311,34 @@ def page_recommend():
     # LLM生成推荐理由
     with st.spinner("AI正在分析您的画像..."):
         demo_r = get_backtest_result(DEFAULT_CODE)
-        if demo_r is not None:
+        # 获取推荐策略的最新信号股票
+        signals_df = load_latest_signals()
+        top_stocks_str = ""
+        if demo_r is not None and not signals_df.empty:
             summary = "\n".join([
                 f"{n}：年化{r['annual_return']:+.2f}%，最大回撤{r['max_drawdown']:.2f}%"
                 for n, r in demo_r.items()
             ])
+            # 找推荐策略对应的信号列
+            strat_to_col = {
+                "策略A": "signal_A", "策略B": "signal_B", "策略C": "signal_C",
+                "多因子综合评分": "signal_A", "趋势动量复合": "signal_B", "均值回复复合": "signal_C",
+            }
+            prices = get_latest_prices()
+            for strat_name in strategies:
+                for key, col in strat_to_col.items():
+                    if key in strat_name and col in signals_df.columns:
+                        top3 = signals_df.nlargest(3, col)[["name", "code", col]]
+                        items = []
+                        for _, row in top3.iterrows():
+                            c = str(row['code']).zfill(6)
+                            price = prices.get(c, 0)
+                            min_buy = int(price * 100)
+                            items.append(f"{row['name']}(现价{price:.0f}元，1手{min_buy:,}元，评分{row[col]:.0f})")
+                        top_stocks_str = "、".join(items)
+                        break
             llm_reason = recommend_strategy(level, amount, horizon,
-                ' + '.join(strategies), summary,
+                ' + '.join(strategies), summary, top_stocks_str,
                 st.session_state.get('risk_score'))
         else:
             llm_reason = None

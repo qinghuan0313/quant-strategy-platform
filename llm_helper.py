@@ -40,25 +40,26 @@ def llm_chat(system_prompt, user_prompt):
         return None
 
 
-def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary, risk_score=None):
-    """LLM策略推荐 —— 真正个性化"""
+def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary, top_stocks="", risk_score=None):
+    """LLM策略推荐 —— 含信号股票和仓位建议"""
     score_info = f"，测评得分{risk_score}/40分" if risk_score else ""
+    stock_hint = f"""\n当前该策略信号最强的股票：{top_stocks}。""" if top_stocks else ""
+
     system = f"""你是量化投资顾问。系统已为用户选定了策略组合「{chosen_strategies}」。
-请为这个用户写推荐理由。必须是针对这个具体用户的，不能是套话。
+请写推荐理由，含仓位建议。
 
 要求：
 1. 根据用户{risk_level}{score_info}的特点，解释为什么这个策略组合合适
-   - 保守型重点说"回撤小、睡得安稳"
-   - 进取型重点说"能承受波动、博取高收益"
-2. 根据投资期限{horizon}给建议——短期(<6个月)提醒频繁调仓风险，长期(>1年)可以忽略短期波动
-3. 引用回测真实数字，用绝对金额说风险
-4. 禁止术语、禁止收益承诺
-5. 150字以内，像真人在聊天"""
+2. 根据投资期限{horizon}——短期(<6个月)分散多只，长期(>1年)可集中
+3. 给出具体仓位建议：投入{amount:,}元，建议买几只看好的股票，每只分配多少资金
+   - A股1手=100股，注意最低买入金额，别推荐用户买不起的
+4. 引用回测真实数字，用绝对金额说风险
+5. 200字以内，像真人在聊天"""
 
     user = f"""用户：{risk_level}，投入{amount:,}元，期限{horizon}
 回测数据：{backtest_summary}
-推荐组合：{chosen_strategies}
-请写推荐理由。"""
+推荐组合：{chosen_strategies}{stock_hint}
+请写推荐理由和仓位建议。"""
 
     return llm_chat(system, user)
 
