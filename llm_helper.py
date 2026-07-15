@@ -33,7 +33,7 @@ def llm_chat(system_prompt, user_prompt):
                 {"role": "user", "content": user_prompt},
             ],
             temperature=0.3,
-            max_tokens=400,
+            max_tokens=500,
         )
         return r.choices[0].message.content.strip()
     except Exception:
@@ -64,7 +64,13 @@ def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_
    - 稳健型：分散3-4只，单只不超过30%，留1-2成现金
    - 平衡型：集中2-3只，单只不超过40%，可满仓
    - 进取型：集中1-2只，单只可达50%，满仓操作
-   用换行分条列出来。A股1手=100股，注意最低买入金额。
+   必须用换行分条列出来，像这样：
+   建议买2-3只
+   每只分配3-4万
+   长江电力（1手约2200元）
+   招商银行（1手约4000元）
+   留2万备用
+   A股1手=100股，注意最低买入金额。
 
 整体约350字。说话像朋友聊天，像在帮他分析问题，不要写论文格式。禁止用"MA5""ADX""夏普比率"等术语。禁止收益承诺。"""
 
