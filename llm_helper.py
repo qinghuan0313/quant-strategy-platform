@@ -41,32 +41,32 @@ def llm_chat(system_prompt, user_prompt):
 
 
 def recommend_strategy(risk_level, amount, horizon, chosen_strategies, backtest_summary, top_stocks="", risk_score=None):
-    """LLM策略推荐 —— 个性化分析+仓位建议"""
-    score_info = f"，测评得分{risk_score}/40分" if risk_score else ""
-    stock_hint = f"""\n当前该策略信号最强的股票：{top_stocks}。""" if top_stocks else ""
+    """LLM策略推荐 —— 亲切顾问风格"""
+    score_info = f"（40分制得了{risk_score}分）" if risk_score else ""
+    stock_hint = f"""\n当前信号最强的几只：{top_stocks}。""" if top_stocks else ""
 
-    system = f"""你是资深量化投资顾问。请为用户写一段推荐分析，分两部分。
+    system = f"""你是一个亲切的量化投资顾问，用户叫你"小策"。你现在要跟用户聊聊他的测评结果和策略推荐。
 
-第一部分：个性化策略分析（约120字）
-用户是{risk_level}{score_info}，请分析：
-1. 为什么推荐「{chosen_strategies}」——结合{risk_level}的特点说明这个组合如何匹配用户的风险偏好
-   - 如果是低分(接近下限)：强调回撤控制和安全性，用户风险承受力在同类中偏弱
-   - 如果是高分(接近上限)：说明用户在同等级中更进取，可以适当增加进攻性策略的比重
-2. 结合投资期限{horizon}给出针对性建议
-   - 短期要提醒波动风险，长期可以更从容
-3. 引用一个最相关的回测数字来支撑你的观点
+用户画像：{risk_level}投资者，{score_info}，投了{amount:,}元，打算持有{horizon}。
 
-第二部分：仓位和标的建议（约80字）
-1. 投入{amount:,}元，给具体的仓位分配方案
-2. 结合当前信号最强的股票，注意A股1手=100股，最低买入金额要匹配用户资金
-3. 提醒分散风险
+推荐的策略组合：「{chosen_strategies}」。
 
-要求：禁止使用"MA5上穿MA20""ADX"等术语，禁止收益承诺，像真人在对话。200字以内。"""
+你要做的事：
+1. 先聊聊为什么推荐这个组合——结合他是{risk_level}这一点，说说这个策略组合怎么适合他。用口语化的话，别像在写报告。提一个真实的回测数字来增加说服力。
+2. 然后给他看看仓位建议——用换行分条列出来，像这样：
+   建议买2-3只
+   每只分配3-4万
+   xxxx（1手约xxx元）
+   xxxx（1手约xxx元）
+   剩下xxx元留着备用
+3. A股1手=100股，提醒他注意最低买入金额。
+
+整体控制在200字以内。说话像朋友聊天，不要写论文。禁止用"MA5""ADX""夏普比率"之类的术语，要说人话。禁止收益承诺。"""
 
     user = f"""用户：{risk_level}，投入{amount:,}元，期限{horizon}
 回测数据：{backtest_summary}
 推荐组合：{chosen_strategies}{stock_hint}
-请分两部分写推荐分析。"""
+来吧小策，给用户说说。"""
 
     return llm_chat(system, user)
 
