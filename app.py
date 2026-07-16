@@ -443,7 +443,7 @@ def page_recommend():
                 ranked = signals_df[["name", "code", col]].copy()
                 ranked.columns = ["股票名称", "代码", "评分"]
                 ranked["最低买入"] = ranked["代码"].apply(
-                    lambda c: f"{prices.get(str(c).zfill(6), 0) * 100 / 10000:.1f}万"
+                    lambda c: f"{int(prices.get(str(c).zfill(6), 0) * 100):,}元"
                 )
 
                 # 合并回测指标
@@ -558,7 +558,7 @@ def page_recommend():
         st.warning("暂无信号数据，请先运行 data/compute_signals.py")
 
     st.divider()
-    st.caption("💡 最低买入 = 最新股价 × 100股（A股最低交易1手）。请根据自己的投资金额判断能否买入。")
+    st.caption("💡 最低买入 = 最新股价 × 100股（A股交易最低1手）。请根据投资金额判断能否买入。")
     st.caption("⚠️ 历史回测不代表未来表现。请根据自身情况独立判断。")
 
 
