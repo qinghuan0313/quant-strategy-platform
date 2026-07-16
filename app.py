@@ -80,6 +80,16 @@ STOCK_OPTIONS = [get_stock_label(c, n) for c, n in STOCKS.items()]
 DEFAULT_CODE = "600900"  # 长江电力，预加载的展示标的
 
 
+@st.cache_data(ttl=3600)
+def load_backtest_metrics():
+    path = "data/backtest_metrics.csv"
+    if os.path.exists(path):
+        df = pd.read_csv(path, dtype={'code': str})
+        df['code'] = df['code'].str.zfill(6)
+        return df
+    return pd.DataFrame()
+
+
 @st.cache_data(ttl=600)
 def get_latest_prices():
     """返回每只股票的最新收盘价"""
@@ -406,17 +416,47 @@ def page_recommend():
         tabs = st.tabs([s[0] for s in strategy_cols])
 
         prices = get_latest_prices()
+        metrics_df = load_backtest_metrics()
+        risk_level = st.session_state.get('risk_level', '稳健型')
 
         for tab, (title, col) in zip(tabs, strategy_cols):
             with tab:
+                # 合并信号评分+回测指标
+                s_name = col.replace("signal_", "")  # "signal_A" -> "A"
                 ranked = signals_df[["name", "code", col]].copy()
-                ranked["最低买入"] = ranked["code"].apply(
+                ranked.columns = ["股票名称", "代码", "评分"]
+                ranked["最低买入"] = ranked["代码"].apply(
                     lambda c: f"{prices.get(str(c).zfill(6), 0) * 100 / 10000:.1f}万"
                 )
-                ranked = ranked.sort_values(col, ascending=False)
-                ranked.columns = ["股票名称", "代码", "评分", "最低买入"]
 
-                if col == "signal_A":
+                # 合并回测指标
+                if not metrics_df.empty:
+                    m = metrics_df[metrics_df['strategy'] == s_name][
+                        ['code', 'annual_return', 'max_drawdown', 'sharpe_ratio']
+                    ].copy()
+                    m.columns = ['代码', '年化收益', '最大回撤', '夏普']
+                    ranked = ranked.merge(m, on='代码', how='left')
+                    ranked["年化收益"] = ranked["年化收益"].apply(
+                        lambda x: f"{x:+.1f}%" if pd.notna(x) else "-")
+                    ranked["最大回撤"] = ranked["最大回撤"].apply(
+                        lambda x: f"{x:.1f}%" if pd.notna(x) else "-")
+                    ranked["夏普"] = ranked["夏普"].apply(
+                        lambda x: f"{x:.2f}" if pd.notna(x) else "-")
+
+                # 按风险等级排序
+                if risk_level == "保守型" and "最大回撤" in ranked.columns:
+                    ranked = ranked.sort_values("最大回撤", ascending=True)
+                elif risk_level == "稳健型" and "夏普" in ranked.columns:
+                    ranked = ranked.sort_values("夏普", ascending=False)
+                elif risk_level == "平衡型" and "年化收益" in ranked.columns:
+                    ranked = ranked.sort_values("年化收益", ascending=False)
+                else:
+                    ranked = ranked.sort_values("评分", ascending=False)
+
+                # 默认排序提示
+                sort_hints = {"保守型": "按最大回撤从小到大", "稳健型": "按夏普从高到低",
+                              "平衡型": "按年化收益从高到低", "进取型": "按信号评分从高到低"}
+                st.caption(f"排序方式：{sort_hints.get(risk_level, '按评分')}")
                     # 策略A是排名制，取Top5/Bottom5而非绝对值阈值
                     ranked_for_a = ranked.sort_values("评分", ascending=False)
                     top5 = ranked_for_a.head(5)
