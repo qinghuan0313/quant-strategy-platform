@@ -460,53 +460,83 @@ def page_recommend():
 
                 if col == "signal_A":
                     # 策略A排名制：Top5 / 中等 / Bottom5
+                    top_n = min(5, len(ranked))
+                    mid_start = top_n
+                    mid_end = min(15, len(ranked))
+                    bot_start = max(0, len(ranked) - 5)
                     c1, c2, c3 = st.columns(3)
                     with c1:
                         st.success("🟢 综合评分 Top 5")
-                        show_table(ranked.head(5), hide_index=True, width='stretch')
+                        if top_n > 0:
+                            show_table(ranked.head(top_n), hide_index=True, width='stretch')
+                        else:
+                            st.caption("暂无")
                     with c2:
                         st.info("🟡 中等（第6-15名）")
-                        mid_n = min(15, len(ranked))
-                        show_table(ranked.iloc[5:mid_n], hide_index=True, width='stretch')
+                        if mid_end > mid_start:
+                            show_table(ranked.iloc[mid_start:mid_end], hide_index=True, width='stretch')
+                        else:
+                            st.caption("暂无")
                     with c3:
                         st.error("🔴 排名靠后（Bottom 5）")
-                        show_table(ranked.tail(5), hide_index=True, width='stretch')
+                        if bot_start < len(ranked):
+                            show_table(ranked.tail(5), hide_index=True, width='stretch')
+                        else:
+                            st.caption("暂无")
                 elif col == "signal_C":
                     hi, mid = 55, 35
-                    lab_hi, lab_mid, lab_lo = "超卖反弹信号", "一般", "回避"
                     good = ranked[ranked["评分"] >= hi]
                     normal = ranked[(ranked["评分"] >= mid) & (ranked["评分"] < hi)]
                     bad = ranked[ranked["评分"] < mid]
                     c1, c2, c3 = st.columns(3)
-                    for col_i, (df, label, threshold) in enumerate(
-                        [(good, f"🟢 {lab_hi}（≥{hi}）", hi),
-                         (normal, f"🟡 {lab_mid}（{mid}-{hi-1}）", mid),
-                         (bad, f"🔴 {lab_lo}（<{mid}）", mid)]):
-                        with [c1, c2, c3][col_i]:
-                            st.success(label) if col_i == 0 else st.info(label) if col_i == 1 else st.error(label)
-                            if len(df) > 0:
-                                show_table(df, hide_index=True, width='stretch')
-                                st.caption(f"{len(df)} 只")
-                            else:
-                                st.caption("暂无")
+                    with c1:
+                        st.success(f"🟢 超卖反弹信号（≥{hi}）")
+                        if len(good) > 0:
+                            show_table(good, hide_index=True, width='stretch')
+                            st.caption(f"{len(good)} 只")
+                        else:
+                            st.caption("暂无")
+                    with c2:
+                        st.info(f"🟡 一般（{mid}-{hi-1}）")
+                        if len(normal) > 0:
+                            show_table(normal, hide_index=True, width='stretch')
+                            st.caption(f"{len(normal)} 只")
+                        else:
+                            st.caption("暂无")
+                    with c3:
+                        st.error(f"🔴 回避（<{mid}）")
+                        if len(bad) > 0:
+                            show_table(bad, hide_index=True, width='stretch')
+                            st.caption(f"{len(bad)} 只")
+                        else:
+                            st.caption("暂无")
                 else:
                     hi, mid = 60, 40
-                    lab_hi, lab_mid, lab_lo = "买入信号", "一般（观望）", "回避"
                     good = ranked[ranked["评分"] >= hi]
                     normal = ranked[(ranked["评分"] >= mid) & (ranked["评分"] < hi)]
                     bad = ranked[ranked["评分"] < mid]
                     c1, c2, c3 = st.columns(3)
-                    for col_i, (df, label, _) in enumerate(
-                        [(good, f"🟢 {lab_hi}（≥{hi}）", hi),
-                         (normal, f"🟡 {lab_mid}（{mid}-{hi-1}）", mid),
-                         (bad, f"🔴 {lab_lo}（<{mid}）", mid)]):
-                        with [c1, c2, c3][col_i]:
-                            st.success(label) if col_i == 0 else st.info(label) if col_i == 1 else st.error(label)
-                            if len(df) > 0:
-                                show_table(df, hide_index=True, width='stretch')
-                                st.caption(f"{len(df)} 只")
-                            else:
-                                st.caption("暂无")
+                    with c1:
+                        st.success(f"🟢 买入信号（≥{hi}）")
+                        if len(good) > 0:
+                            show_table(good, hide_index=True, width='stretch')
+                            st.caption(f"{len(good)} 只")
+                        else:
+                            st.caption("暂无")
+                    with c2:
+                        st.info(f"🟡 一般观望（{mid}-{hi-1}）")
+                        if len(normal) > 0:
+                            show_table(normal, hide_index=True, width='stretch')
+                            st.caption(f"{len(normal)} 只")
+                        else:
+                            st.caption("暂无")
+                    with c3:
+                        st.error(f"🔴 回避（<{mid}）")
+                        if len(bad) > 0:
+                            show_table(bad, hide_index=True, width='stretch')
+                            st.caption(f"{len(bad)} 只")
+                        else:
+                            st.caption("暂无")
     else:
         st.warning("暂无信号数据，请先运行 data/compute_signals.py")
 
