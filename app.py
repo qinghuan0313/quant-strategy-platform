@@ -408,9 +408,10 @@ def page_recommend():
 
     signals_df = load_latest_signals()
     if not signals_df.empty:
+        rl = st.session_state.get('risk_level', '稳健型')
         with st.expander("📖 怎么看这张表？点击展开"):
             st.markdown(f"""
-            **您的风险等级：{risk_level}**——表格已按此等级自动排序：
+            **您的风险等级：{rl}**——表格已按此等级自动排序：
             - 保守型 → 优先看**最大回撤**小的股票（亏得少最重要）
             - 稳健型 → 优先看**夏普**高的股票（每份风险换来的回报最高）
             - 平衡型 → 优先看**年化收益**高的股票（愿意承受波动博收益）
